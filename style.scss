@@ -92,6 +92,21 @@ section.header {
   }
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-left {
+  animation: 0.6s ease-out 0s 1 slideInFromLeft;
+}
+
 @media screen and (min-width: 768px) {
   .text-left-md {
     text-align: left;
