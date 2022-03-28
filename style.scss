@@ -1,6 +1,9 @@
 $primaryColor: #457afb;
-$bgColor: #fafafa;
-
+$bgColor: #f7d764;
+$bgShade: #f3c316;
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   background-color: #fff;
@@ -15,11 +18,11 @@ h1,h2,h3 {
 }
 
 .border-top {
-  border-top: 1px solid #ddd;
+  border-top: 2px solid #000;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #000;
 }
 
 .container {
@@ -51,6 +54,13 @@ section {
   column-gap: 10px;
 }
 
+.p-1 {
+  padding: 10px;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
 .mt-1 {
   margin-top: 10px;
 }
@@ -61,6 +71,10 @@ section {
 
 .mb-1 {
   margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
 }
 
 $grid__cols: 4;
@@ -79,9 +93,11 @@ $breakpoints: (
 }
 
 .header {
-  font-size: 18px;
-  background-position: 100% 0%;
-  background-size: auto;
+  // font-size: 18px;
+  background: url('images/bg.png') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   text-align: center;
 }
 
@@ -130,22 +146,32 @@ $breakpoints: (
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
-  border: none;
+  border: 1px solid #666;
   border-radius: 5px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  background: $primaryColor;
+  background: $bgColor;
   transition: all 0.3s ease 0s;
   outline: none !important;
   padding: 7px 15px 7px 15px;
-  color: #fff;
+  color: #372608;
   display: inline-block;
   white-space: nowrap;
 
   &:hover {
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
     text-decoration: none;
-    color: #fff;
   }
+}
+.bg-alt .nice-button {
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+
+.bg-photo {
+  background: $bgColor url("images/guy.jpg") no-repeat;
+  background-size: cover;
+  height: 400px;
 }
 
 .cards {
@@ -155,23 +181,24 @@ $breakpoints: (
 
 .card {
   padding: 10px;
-  border: 1px solid #dce1e2;
+  border: 2px solid #ccc;
   border-radius: 5px;
   position: relative;
-  background-color: $bgColor;
+  background-color: #fff;
+  box-shadow: 4px 9px 30px -16px rgba(66, 68, 90, 1);
 }
 
 .card--header {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  border: 1px solid #ddd;
+  // border: 2px solid #ccc;
   border-radius: 5px;
   padding: 5px 15px;
-  position: absolute;
+  // position: absolute;
   top: -30px;
   background: #fff;
-  box-shadow: 4px 9px 30px -16px rgba(66, 68, 90, 1);
+  // box-shadow: 4px 9px 30px -16px rgba(66, 68, 90, 1);
 }
 
 .card--image {
@@ -179,9 +206,13 @@ $breakpoints: (
 }
 
 .card--body {
-  margin-top: 61px;
-  padding: 10px;
+  margin-top: 10px;
+  padding: 5px;
   height: 110px;
+}
+
+img.logo {
+  width: 225px;
 }
 
 .bg-alt {
@@ -208,7 +239,7 @@ $breakpoints: (
     text-align: left;
   }
   .header {
-    height: 350px;
+    height: 100vh;
   }
   .cards {
     flex-wrap: nowrap;
@@ -223,6 +254,7 @@ $breakpoints: (
   }
   
   .try-it {
+    // margin: 0 0 100px;
     padding: 0;
   }
 }
