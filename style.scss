@@ -95,7 +95,7 @@ $breakpoints: (
 .header {
   // font-size: 18px;
   background: url('images/bg.png') no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   // background-position: center;
   text-align: center;

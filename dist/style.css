@@ -84,7 +84,7 @@ section {
 
 .header {
   background: url("images/bg.png") no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   text-align: center; }
 
