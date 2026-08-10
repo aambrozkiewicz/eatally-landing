@@ -1,17 +1,17 @@
 {
   "name": "eatally-landing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Landing page systemu zamówień online eatally",
+  "private": true,
   "scripts": {
-    "build": "npx node-sass *.scss -o dist/ --output-style compressed",
-    "watch": "npx node-sass --watch *.scss -o dist/"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "sass": "^1.90.0",
+    "vite": "^7.1.0"
   }
 }
