@@ -17,38 +17,6 @@
     />
     <link rel="stylesheet" href="/src/style.scss" />
     <link rel="stylesheet" href="/src/enhancements.scss" />
-    <style>
-      .setup-badge {
-        position: absolute;
-        left: 4px;
-        bottom: 72px;
-        padding: 12px 14px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-left: 3px solid #f2643c;
-        background: rgba(247, 244, 234, 0.92);
-        box-shadow: 0 9px 24px #17191412;
-      }
-      .setup-badge strong {
-        font-family: "Newsreader", serif;
-        font-size: 25px;
-        line-height: 1;
-      }
-      .setup-badge span {
-        color: #66675f;
-        font:
-          500 8px/1.4 "DM Mono",
-          monospace;
-        letter-spacing: 0.4px;
-        text-transform: uppercase;
-      }
-      @media (max-width: 650px) {
-        .setup-badge {
-          display: none;
-        }
-      }
-    </style>
   </head>
   <body id="top">
     <a class="skip" href="#main">Przejdź do treści</a>
@@ -159,10 +127,6 @@
               <span>✓</span>
               <div><small>ZAMÓWIENIE #184</small><b>Wpłynęło do kuchni</b></div>
             </div>
-            <div class="setup-badge">
-              <strong>10 min</strong
-              ><span>do uruchomienia<br />Twojej strony</span>
-            </div>
           </div>
         </div>
       </section>
@@ -250,8 +214,8 @@
                 Ustalaj strefy, minimalne koszyki i koszt dostawy według
                 odległości.
               </p>
-              <div class="zone">
-                <i></i><i></i><b>Twoja<br />kuchnia</b>
+              <div class="zone" aria-hidden="true">
+                <i></i><i></i><b></b>
               </div>
             </article>
             <article class="feature">

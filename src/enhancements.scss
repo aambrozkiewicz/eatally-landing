@@ -5,7 +5,7 @@ $muted: #66675f;
 $line: #d9d5c9;
 
 .hero {
-  height: 100dvh;
+  height: calc(100dvh - 76px);
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,79 @@ $line: #d9d5c9;
 .hero-grid {
   flex: 1;
   min-height: 0;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.hero h1 {
+  margin-block: 18px 20px;
+  font-size: clamp(52px, 5.4vw, 78px);
+}
+.hero .lead {
+  font-size: 16px;
+  line-height: 1.55;
+}
+.hero-actions {
+  margin-top: 26px;
+}
+.hero-product {
+  height: 510px;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+.hero .order-site {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.zone b {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $ink;
+  font-size: 0;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    height: calc(100dvh - 66px);
+  }
+  .hero-grid {
+    gap: 18px;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  .hero h1 {
+    margin-block: 14px 16px;
+    font-size: clamp(40px, 12vw, 50px);
+    line-height: 0.88;
+  }
+  .hero .lead {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .hero-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .hero-actions .pill {
+    min-height: 42px;
+    padding-inline: 14px;
+    font-size: 11px;
+  }
+  .hero-actions .text-link {
+    font-size: 11px;
+  }
+  .hero .micro {
+    margin-top: 12px;
+  }
+  .hero-product {
+    height: 245px;
+    transform: scale(0.62);
+    transform-origin: top center;
+  }
 }
 
 .week-selector {
