@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffd447" />
+    <title>eatally — Design system</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/design-system.scss" />
+  </head>
+  <body>
+    <header class="ds-header">
+      <div class="ds-shell ds-nav">
+        <a class="ds-logo" href="/">eatally</a>
+        <span class="ds-edition">System interfejsu / v1.0</span>
+        <a href="#wzorzec">Widok zamawiania ↓</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="ds-shell ds-hero">
+        <div>
+          <p class="ds-kicker">Design system</p>
+          <h1>Jedzenie na pierwszym <em>planie.</em></h1>
+        </div>
+        <p>Wspólny język landing page’a i aplikacji zamówieniowej: ciepły jak papierowe menu, szybki jak kartka z zamówieniem w kuchni. Żółty prowadzi do zakupu, pomarańczowy informuje, a zieleń potwierdza.</p>
+      </section>
+
+      <section class="ds-section">
+        <div class="ds-shell">
+          <header class="ds-section-head"><span>01 / Kolor</span><h2>Kolor ma funkcję, nie jest dekoracją.</h2></header>
+          <div class="ds-grid">
+            <div class="swatch ink ds-span-4"><b>Atrament</b><code>#171914 · tekst / nawigacja</code></div>
+            <div class="swatch yellow ds-span-4"><b>Żółty rachunek</b><code>#FFD447 · główna akcja</code></div>
+            <div class="swatch orange ds-span-4"><b>Pomarańcz pieca</b><code>#F2643C · komunikat / akcent</code></div>
+            <div class="swatch green ds-span-4"><b>Zioła</b><code>#B8DC63 · sukces / dostępność</code></div>
+            <div class="swatch paper ds-span-4"><b>Papier menu</b><code>#F7F4EA · tło aplikacji</code></div>
+            <div class="swatch white ds-span-4"><b>Talerz</b><code>#FFFFFF · powierzchnie</code></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <div class="ds-shell">
+          <header class="ds-section-head"><span>02 / Typografia</span><h2>Głos restauracji, język obsługi i dane kuchni.</h2></header>
+          <div class="ds-grid">
+            <article class="ds-card ds-span-8"><div class="type-data">Newsreader / Display</div><p class="type-display">Curry z pieczonym kalafiorem</p></article>
+            <article class="ds-card ds-span-4"><div class="type-data">DM Mono / Dane</div><p class="type-data" style="margin-top:44px">DOSTAWA 12:00–15:00<br />ZAMÓWIENIE #184</p></article>
+            <article class="ds-card ds-span-12"><div class="type-data">DM Sans / Interfejs</div><p class="type-body">Czytelne opisy, formularze i działania. Zdania krótkie, aktywne, bez języka technicznego: „Dodaj do koszyka”, „Wybierz godzinę”, „Zamów i zapłać”.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-section">
+        <div class="ds-shell">
+          <header class="ds-section-head"><span>03 / Elementy</span><h2>Mały zestaw komponentów, konsekwentne zachowanie.</h2></header>
+          <div class="ds-grid">
+            <article class="ds-card ds-span-6"><h3>Przyciski</h3><div class="button-row"><button class="ea-button">Dodaj <span>＋</span></button><button class="ea-button ea-button--dark">Zamów i zapłać</button><button class="ea-button ea-button--outline">Wstecz</button><button class="ea-button" disabled>Niedostępne</button></div></article>
+            <article class="ds-card ds-span-6"><h3>Statusy zamówienia</h3><div class="button-row"><span class="ea-status">Przyjęto</span><span class="ea-status ea-status--positive">W dostawie</span><span class="ea-status ea-status--attention">Wymaga uwagi</span></div></article>
+            <article class="ds-card ds-span-6"><h3>Pole formularza</h3><div class="ea-field"><label for="address">Adres dostawy</label><input id="address" value="Puławska 18, Warszawa" /><small>Dostarczamy tutaj za 6 zł.</small></div></article>
+            <article class="ds-card ds-span-6"><h3>Wybór dnia</h3><div class="ea-day-picker"><button class="ea-day"><small>PON</small><b>10</b><span>6 dań</span></button><button class="ea-day is-active"><small>WT</small><b>11</b><span>8 dań</span></button><button class="ea-day"><small>ŚR</small><b>12</b><span>5 dań</span></button><button class="ea-day"><small>CZW</small><b>13</b><span>7 dań</span></button><button class="ea-day"><small>PT</small><b>14</b><span>4 dania</span></button><button class="ea-day" disabled><small>SOB</small><b>15</b><span>brak</span></button><button class="ea-day"><small>ND</small><b>16</b><span>3 dania</span></button></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-section" id="wzorzec">
+        <div class="ds-shell">
+          <header class="ds-section-head"><span>04 / Wzorzec</span><h2>Referencyjny widok aplikacji zamówieniowej.</h2></header>
+          <div class="ds-grid">
+            <article class="ds-card ds-span-4">
+              <h3>Zasady wdrożenia</h3>
+              <ul class="rule-list">
+                <li><b>Hierarchia</b><span>Jedna żółta akcja główna na ekranie.</span></li>
+                <li><b>Zdjęcia</b><span>Jedzenie zajmuje minimum 40% karty dania.</span></li>
+                <li><b>Dane</b><span>Godziny, daty i statusy zawsze w DM Mono.</span></li>
+                <li><b>Kształt</b><span>4 px dla akcji, 12 px dla kart, 24 px dla głównych powierzchni.</span></li>
+                <li><b>Język</b><span>Nazywaj rezultat: „Zamów i zapłać”, nie „Dalej”.</span></li>
+              </ul>
+            </article>
+            <div class="order-demo ds-span-8">
+              <div class="order-top"><strong>micha od serca</strong><span>Warszawa, Mokotów</span><b>☰</b></div>
+              <div class="order-body">
+                <p class="ea-eyebrow">Menu na ten tydzień</p>
+                <div class="ea-day-picker"><button class="ea-day"><small>PON</small><b>10</b><span>6 dań</span></button><button class="ea-day is-active"><small>WT</small><b>11</b><span>8 dań</span></button><button class="ea-day"><small>ŚR</small><b>12</b><span>5 dań</span></button><button class="ea-day"><small>CZW</small><b>13</b><span>7 dań</span></button><button class="ea-day"><small>PT</small><b>14</b><span>4 dania</span></button><button class="ea-day" disabled><small>SOB</small><b>15</b><span>brak</span></button><button class="ea-day"><small>ND</small><b>16</b><span>3 dania</span></button></div>
+                <article class="dish-card"><div class="dish-visual" aria-label="Curry z pieczonym kalafiorem">🥘</div><div class="dish-copy"><span class="type-data" style="color:var(--ea-orange)">DOSTAWA 12:00–15:00</span><h3>Curry z pieczonym kalafiorem</h3><p>Ryż jaśminowy, warzywa, kolendra, limonka</p><div class="dish-buy"><strong>32 zł</strong><button class="ea-button">Dodaj <span>＋</span></button></div></div></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
