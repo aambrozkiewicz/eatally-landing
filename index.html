@@ -27,7 +27,7 @@
         >
         <nav aria-label="Główna nawigacja">
           <a href="#funkcje">Funkcje</a><a href="#start">Jak zacząć</a
-          ><a href="#cennik">Cena</a>
+          ><a href="#koszty">Koszty</a>
         </nav>
         <div class="nav-actions">
           <a
@@ -214,9 +214,7 @@
                 Ustalaj strefy, minimalne koszyki i koszt dostawy według
                 odległości.
               </p>
-              <div class="zone" aria-hidden="true">
-                <i></i><i></i><b></b>
-              </div>
+              <div class="zone" aria-hidden="true"><i></i><i></i><b></b></div>
             </article>
             <article class="feature">
               <span class="icon money-icon" aria-hidden="true"
@@ -263,10 +261,14 @@
                 </p>
               </div>
               <div class="order-integrations">
-                <div class="notification">
-                  <span>NOWE</span><b>#0184</b><i>12:38</i>
+                <div class="integration-note">
+                  <span class="email-badge">E-MAIL</span>
+                  <div>
+                    <b>Powiadomienia o zamówieniach</b>
+                    <p>Skonfiguruj e-mail po każdym nowym zamówieniu.</p>
+                  </div>
                 </div>
-                <div class="api-note">
+                <div class="integration-note">
                   <span>API</span>
                   <div>
                     <b>Połącz z własnym systemem</b>
@@ -290,18 +292,49 @@
           </div>
           <div class="compare">
             <p>
-              <span>✓</span><b>Twoje logo i adres strony</b
+              <span aria-hidden="true"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 10h16v10H4zM3 10l2-6h14l2 6M9 20v-5h6v5" />
+                  <path d="M7 10a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0" />
+                </svg></span><b>Twoje logo i adres strony</b
               ><small>Klient zapamiętuje właśnie Ciebie.</small>
             </p>
             <p>
-              <span>✓</span><b>Twoja relacja z klientami</b
+              <span aria-hidden="true"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8" />
+                  <path d="M19 8v6M22 11h-6" />
+                </svg></span><b>Twoja relacja z klientami</b
               ><small>Zamówienia trafiają bezpośrednio do restauracji.</small>
             </p>
             <p>
-              <span>✓</span><b>Twoje zasady sprzedaży</b
+              <span aria-hidden="true"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" />
+                </svg></span><b>Twoje zasady sprzedaży</b
               ><small>Ty decydujesz o menu, dostawach i godzinach.</small>
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="testimonial" aria-labelledby="testimonial-title">
+        <div class="wrap">
+          <div class="testimonial-heading">
+            <p class="tag"><span></span> Opinie naszych klientów</p>
+          </div>
+          <figure class="testimonial-card">
+            <span class="testimonial-mark" aria-hidden="true">“</span>
+            <blockquote id="testimonial-title">
+              Eatally uporządkowało nam codzienne zamówienia. Klienci od razu
+              widzą aktualne menu, a my mamy wszystko w jednym miejscu i możemy
+              skupić się na gotowaniu.
+            </blockquote>
+            <figcaption>
+              <span class="testimonial-avatar" aria-hidden="true">MP</span>
+              <span><strong>Marchewkowe Pole</strong><small>Catering</small></span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -337,7 +370,7 @@
         </div>
       </section>
 
-      <section class="pricing" id="cennik">
+      <section class="pricing" id="koszty">
         <div class="wrap price-panel">
           <div class="price-copy">
             <p class="tag tag-light">
@@ -371,11 +404,34 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <div class="wrap">
-        <a class="logo" href="#top">eatally</a>
-        <p>Twoja restauracja. Twoje zamówienia.</p>
-        <!-- <a href="mailto:eatally@ambrozkiewicz.com">eatally@ambrozkiewicz.com</a> -->
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="logo" href="#top" aria-label="eatally — wróć na górę"
+              >eatally</a
+            >
+            <h2>Twoja restauracja.<br /><em>Twoje zamówienia.</em></h2>
+            <p>
+              Własna strona do codziennych zamówień — bez marketplace’u
+              pomiędzy Tobą a klientem.
+            </p>
+          </div>
+          <div class="footer-contact">
+            <p class="footer-label">Porozmawiajmy</p>
+            <a href="mailto:eatally@ambrozkiewicz.com"
+              >eatally@ambrozkiewicz.com</a
+            >
+            <a href="tel:+48790251519">+48 790 251 519</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 eatally</span>
+          <span class="footer-status"
+            ><i aria-hidden="true"></i>System działa prawidłowo</span
+          >
+          <span>Zrobione dla lokalnej gastronomii</span>
+        </div>
       </div>
     </footer>
 
@@ -401,31 +457,67 @@
             name="access_key"
             value="a2a3d410-fde3-415e-b42c-b34c2f70ab68"
           />
-          <input type="hidden" name="subject" value="Nowe zgłoszenie z eatally.pl" />
+          <input
+            type="hidden"
+            name="subject"
+            value="Nowe zgłoszenie z eatally.pl"
+          />
           <input type="hidden" name="from_name" value="Formularz eatally" />
-          <input class="form-honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
+          <input
+            class="form-honeypot"
+            type="checkbox"
+            name="botcheck"
+            tabindex="-1"
+            autocomplete="off"
+          />
 
           <div class="form-field">
             <label for="contact-name">Imię</label>
-            <input id="contact-name" name="name" type="text" autocomplete="name" required />
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            />
           </div>
           <div class="form-field">
             <label for="contact-restaurant">Nazwa restauracji</label>
-            <input id="contact-restaurant" name="restaurant" type="text" autocomplete="organization" required />
+            <input
+              id="contact-restaurant"
+              name="restaurant"
+              type="text"
+              autocomplete="organization"
+              required
+            />
           </div>
           <div class="form-row">
             <div class="form-field">
               <label for="contact-email">E-mail</label>
-              <input id="contact-email" name="email" type="email" autocomplete="email" />
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+              />
             </div>
             <div class="form-field">
               <label for="contact-phone">Telefon</label>
-              <input id="contact-phone" name="phone" type="tel" autocomplete="tel" />
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+              />
             </div>
           </div>
-          <p class="contact-hint" id="contact-hint">Podaj e-mail lub numer telefonu.</p>
+          <p class="contact-hint" id="contact-hint">
+            Podaj e-mail lub numer telefonu.
+          </p>
           <div class="form-field">
-            <label for="contact-message">Co chcesz usprawnić? <span>opcjonalnie</span></label>
+            <label for="contact-message"
+              >Co chcesz usprawnić? <span>opcjonalnie</span></label
+            >
             <textarea id="contact-message" name="message" rows="3"></textarea>
           </div>
           <label class="contact-consent">
@@ -433,11 +525,18 @@
             <span>Zgadzam się na kontakt w sprawie prezentacji eatally.</span>
           </label>
           <button class="pill pill-primary contact-submit" type="submit">
-            <span class="submit-label">Umów prezentację</span><span aria-hidden="true">→</span>
+            <span class="submit-label">Umów prezentację</span
+            ><span aria-hidden="true">→</span>
           </button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
-        <button class="contact-close" type="button" aria-label="Zamknij formularz">×</button>
+        <button
+          class="contact-close"
+          type="button"
+          aria-label="Zamknij formularz"
+        >
+          ×
+        </button>
       </div>
     </dialog>
     <script>
@@ -489,9 +588,9 @@
           contactDialog.showModal();
         }),
       );
-      contactDialog.querySelector(".contact-close").addEventListener("click", () =>
-        contactDialog.close(),
-      );
+      contactDialog
+        .querySelector(".contact-close")
+        .addEventListener("click", () => contactDialog.close());
       contactDialog.addEventListener("click", (event) => {
         if (event.target === contactDialog) contactDialog.close();
       });
@@ -521,11 +620,13 @@
 
           contactForm.reset();
           contactStatus.classList.add("is-success");
-          contactStatus.textContent = "Dzięki! Odezwę się w ciągu jednego dnia roboczego.";
+          contactStatus.textContent =
+            "Dzięki! Odezwę się w ciągu jednego dnia roboczego.";
           submitLabel.textContent = "Wysłano";
         } catch (error) {
           contactStatus.classList.add("is-error");
-          contactStatus.textContent = "Nie udało się wysłać formularza. Spróbuj ponownie lub zadzwoń pod +48 790 251 519.";
+          contactStatus.textContent =
+            "Nie udało się wysłać formularza. Spróbuj ponownie lub zadzwoń pod +48 790 251 519.";
           contactSubmit.disabled = false;
           submitLabel.textContent = "Spróbuj ponownie";
         }
