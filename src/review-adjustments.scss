@@ -1,6 +1,9 @@
 $ink:#171915;$yellow:#f6c945;$orange:#ed6847;$white:#fff;
 
 html{background:#f6f2e8;color-scheme:light}
+.button.primary{color:$ink;-webkit-text-fill-color:$ink}
+#contact-title:focus{outline:none}
+.contact-form label>span{display:flex;align-items:baseline;gap:6px}
 
 #jak-dziala,#mozliwosci,#o-nas{scroll-margin-top:74px}
 #jak-dziala,#mozliwosci,#o-nas{height:calc(100dvh - 74px);padding-block:0;display:flex;align-items:center}

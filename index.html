@@ -390,7 +390,7 @@
         </button>
         <div class="dialog-copy">
           <p class="eyebrow">Bez zobowiązań</p>
-          <h2 id="contact-title">Pokaż nam swój proces.</h2>
+          <h2 id="contact-title" tabindex="-1">Pokaż nam swój proces.</h2>
           <p>
             Odezwiemy się w ciągu jednego dnia roboczego i pokażemy Eatally na
             przykładzie Twojego cateringu.
@@ -422,7 +422,7 @@
               required
               autocomplete="email" /></label
           ><label
-            >Telefon <small>opcjonalnie</small
+            ><span>Telefon <small>opcjonalnie</small></span
             ><input name="phone" type="tel" autocomplete="tel" /></label
           ><button class="button primary" type="submit">Umów demo →</button>
           <p class="form-status" role="status" aria-live="polite"></p>
@@ -442,6 +442,11 @@
         el.addEventListener("click", (e) => {
           e.preventDefault();
           dialog.showModal();
+          requestAnimationFrame(() =>
+            dialog
+              .querySelector("#contact-title")
+              .focus({ preventScroll: true }),
+          );
         }),
       );
       dialog
