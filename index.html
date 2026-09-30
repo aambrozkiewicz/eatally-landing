@@ -25,11 +25,15 @@
     <link rel="stylesheet" href="/src/style.scss" />
     <link rel="stylesheet" href="/src/review-adjustments.scss" />
   </head>
-  <body id="top">
+  <body>
     <a class="skip" href="#main">Przejdź do treści</a>
     <header class="header">
       <div class="wrap nav">
-        <a class="logo" href="#top" aria-label="Eatally — strona główna"
+        <a
+          class="logo"
+          href="/"
+          data-scroll-top
+          aria-label="Eatally — strona główna"
           >eatally</a
         >
         <nav aria-label="Główna nawigacja">
@@ -81,14 +85,13 @@
               kuchni i dostawy.
             </p>
             <div class="actions">
-              <a class="button primary" href="#jak-dziala"
-                >Zobacz, jak to działa <span>↓</span></a
+              <a class="button primary" href="#start">Utwórz stronę cateringu</a
               ><a class="button ghost" href="#kontakt" data-contact-modal
                 >Umów demo</a
               >
             </div>
             <p class="trust">
-              Twoja marka <i>·</i> Twoja domena <i>·</i> Bez prowizji od
+              Twoja marka <i>·</i> Twoja subdomena <i>·</i> Bez prowizji od
               sprzedaży
             </p>
           </div>
@@ -272,6 +275,64 @@
         </div>
       </section>
 
+      <section class="delivery-zones" aria-labelledby="delivery-zones-title">
+        <div class="wrap delivery-zones-grid">
+          <div class="zones-copy">
+            <p class="eyebrow light">Strefy dowozu</p>
+            <h2 id="delivery-zones-title">
+              Każdy kilometr<br /><em>ma swoją cenę.</em>
+            </h2>
+            <p class="zones-lead">
+              Twórz strefy na podstawie odległości od Twojej kuchni i ustalaj
+              koszt dostawy dla każdej z nich. Gdy klient poda adres, Eatally
+              automatycznie dopasuje właściwą cenę.
+            </p>
+            <ul class="zones-benefits">
+              <li><span>01</span> Dowolny zasięg każdej strefy</li>
+              <li><span>02</span> Osobny koszt dostawy</li>
+              <li><span>03</span> Automatyczne naliczanie po adresie</li>
+            </ul>
+          </div>
+
+          <div class="zone-map" aria-label="Przykład trzech stref dostawy">
+            <div class="map-grid" aria-hidden="true"></div>
+            <div class="range-ring range-ring-far" aria-hidden="true"></div>
+            <div class="range-ring range-ring-mid" aria-hidden="true"></div>
+            <div class="range-ring range-ring-near" aria-hidden="true"></div>
+            <svg
+              class="delivery-route"
+              viewBox="0 0 560 560"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M280 280C318 251 337 204 375 196C420 186 438 236 462 217"
+              />
+            </svg>
+            <div class="kitchen-pin">
+              <span aria-hidden="true">⌂</span><b>Twoja kuchnia</b>
+            </div>
+            <div class="client-pin">
+              <i aria-hidden="true"></i><b>Klient</b><span>8,4 km</span>
+            </div>
+            <div class="zone-price zone-price-near">
+              <span>do 5 km</span><strong>0 zł</strong>
+            </div>
+            <div class="zone-price zone-price-mid">
+              <span>5–12 km</span><strong>12 zł</strong>
+            </div>
+            <div class="zone-price zone-price-far">
+              <span>12–20 km</span><strong>24 zł</strong>
+            </div>
+            <div class="price-result">
+              <span>Koszt dostawy</span>
+              <strong>12,00 zł</strong>
+              <small>Strefa 2 · naliczono automatycznie</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="features">
         <div class="wrap">
           <div class="section-title">
@@ -357,26 +418,59 @@
         </div>
       </section>
 
-      <section class="final-cta">
-        <div class="wrap">
-          <h2>
-            Mniej czasu na zbieranie zamówień.
-            <em>Więcej czasu na catering.</em>
-          </h2>
-          <p>
-            Zobacz, jak Eatally może uporządkować codzienną obsługę Twoich
-            klientów firmowych.
-          </p>
-          <a class="button primary" href="#kontakt" data-contact-modal
-            >Umów demo →</a
-          >
+      <section
+        id="start"
+        class="instant-launch"
+        aria-labelledby="instant-launch-title"
+      >
+        <div class="wrap instant-launch-grid">
+          <div class="instant-launch-copy">
+            <p class="eyebrow">Od pomysłu do strony w kilka sekund</p>
+            <h2 id="instant-launch-title">
+              Twój catering.<br /><em>Już online.</em>
+            </h2>
+            <p class="instant-launch-lead">
+              Podaj nazwę, wybierz adres i zacznij korzystać. Bez czekania na
+              wdrożenie, bez uzupełniania menu na start.
+            </p>
+            <ol class="launch-steps" aria-label="Jak utworzyć stronę">
+              <li><span>01</span><strong>Podajesz nazwę cateringu</strong></li>
+              <li><span>02</span><strong>Wybierasz swój adres</strong></li>
+              <li><span>03</span><strong>Strona jest gotowa</strong></li>
+            </ol>
+          </div>
+          <div class="launch-result">
+            <div class="launch-window">
+              <div class="launch-window-bar">
+                <span class="window-dots" aria-hidden="true"
+                  ><i></i><i></i><i></i
+                ></span>
+                <span class="live-status"><i></i> Strona online</span>
+              </div>
+              <div class="launch-window-body">
+                <span class="launch-label">Twój nowy adres</span>
+                <strong>twoj-catering<small>.eatally.pl</small></strong>
+                <p>Gotowa do przyjmowania zamówień.</p>
+              </div>
+            </div>
+            <a
+              class="button launch-button"
+              href="https://panel.eatally.pl/rejestracja"
+            >
+              Utwórz swoją stronę <span>→</span>
+            </a>
+            <p class="contact-consent">
+              Zakładając stronę, prosisz nas również o kontakt. Bezpłatnie
+              pomożemy Ci zacząć albo odpowiemy na dodatkowe pytania.
+            </p>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="wrap">
-        <a class="logo" href="#top">eatally</a>
+        <a class="logo" href="/" data-scroll-top>eatally</a>
         <span>System zamówień dla cateringów obsługujących firmy.</span>
         <a href="mailto:eatally@ambrozkiewicz.com">eatally@ambrozkiewicz.com</a
         ><span>© 2026</span>
@@ -436,6 +530,13 @@
         "scroll",
         () => header.classList.toggle("scrolled", scrollY > 16),
         { passive: true },
+      );
+      document.querySelectorAll("[data-scroll-top]").forEach((link) =>
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          history.replaceState(null, "", location.pathname + location.search);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }),
       );
       const dialog = document.querySelector("#kontakt");
       document.querySelectorAll("[data-contact-modal]").forEach((el) =>
