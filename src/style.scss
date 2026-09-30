@@ -784,6 +784,8 @@ h3 {
 .kitchen-pin {
   left: 50%;
   top: 50%;
+  width: 68px;
+  height: 68px;
   transform: translate(-50%, -50%);
 }
 .kitchen-pin > span {
@@ -806,6 +808,11 @@ h3 {
   color: $ink;
   font: 600 9px "DM Mono", monospace;
   white-space: nowrap;
+}
+.kitchen-pin b {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
 }
 .client-pin {
   left: 80%;
