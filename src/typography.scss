@@ -1,0 +1,7 @@
+// Match eatally-panel: Bootstrap system typography and DM Sans wordmark.
+:root {
+  --ea-font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --ea-font-display: var(--ea-font-body);
+  --ea-font-data: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ea-font-brand: "DM Sans", sans-serif;
+}

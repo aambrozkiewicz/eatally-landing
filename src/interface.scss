@@ -1,0 +1,67 @@
+// Values drawn from eatally-panel NiceButton, Label and registration form.
+:root {
+  --ea-yellow: #f6c945;
+  --ea-control-border: #cbd4ce;
+  --ea-control-text: #493804;
+  --ea-control-hover: #f5f6f5;
+  --ea-control-active-border: #caa42d;
+  --ea-focus: rgba(246, 201, 69, .4);
+  --ea-positive: #317159;
+  --ea-positive-bg: #dcf2ea;
+  --ea-negative: #a52a34;
+  --ea-negative-bg: #f8d7da;
+  --ea-neutral: #474d66;
+  --ea-neutral-bg: #e8ebf2;
+  --ea-radius-xs: 4px;
+  --ea-radius-sm: 8px;
+  --ea-radius-field: 9px;
+  --ea-radius-md: 11px;
+  --ea-radius-lg: 18px;
+}
+
+@mixin button {
+  border: 1px solid var(--ea-control-border);
+  border-radius: var(--ea-radius-sm);
+  background: #fff;
+  color: var(--ea-control-text);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(73, 56, 4, .06);
+  transition: color .16s ease, border-color .16s ease, background-color .16s ease, box-shadow .16s ease, transform .16s ease;
+  &:hover:not(:disabled) {
+    border-color: #b9c2bc;
+    color: #342802;
+    background: var(--ea-control-hover);
+    box-shadow: 0 2px 5px rgba(73, 56, 4, .08);
+    transform: translateY(-1px);
+  }
+  &:active:not(:disabled) { transform: translateY(1px); box-shadow: inset 0 1px 3px rgba(73, 56, 4, .14); }
+  &:focus-visible { outline: 3px solid var(--ea-focus); outline-offset: 2px; }
+  &:disabled { border-color: #e0e3e1; color: #9ba19d; background: #f3f4f3; box-shadow: none; transform: none; opacity: 1; cursor: not-allowed; }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+@mixin primary {
+  border-color: #b89018;
+  background: var(--ea-yellow);
+  color: #342802;
+  font-weight: 700;
+  box-shadow: 0 3px 9px rgba(73, 56, 4, .16);
+  &:hover:not(:disabled) {
+    border-color: #b89018;
+    background: #f2c235;
+    color: #342802;
+    box-shadow: 0 3px 9px rgba(73, 56, 4, .16);
+    transform: translateY(-1px);
+  }
+}
+@mixin secondary {
+  border-color: #cbd4ce;
+  background: #fff;
+  color: #354039;
+  font-weight: 600;
+  &:hover:not(:disabled) {
+    background: #fff;
+    color: #29352d;
+    border-color: #b9c2bc;
+  }
+}
