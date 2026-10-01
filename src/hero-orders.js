@@ -10,7 +10,6 @@ if (scene) {
   function render(time) {
     orders.forEach((order, index) => order.classList.toggle('is-visible', time >= 400 + index * 1500));
     scene.classList.toggle('is-framed', time >= 4600);
-    scene.classList.toggle('is-border-complete', time >= 6150);
     scene.classList.toggle('has-heading', time >= 6300);
     scene.classList.toggle('has-summary', time >= 7000);
   }
