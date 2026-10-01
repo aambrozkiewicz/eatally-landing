@@ -977,7 +977,10 @@ h3 {
 .instant-launch {
   position: relative;
   overflow: hidden;
+  min-height: 100dvh;
   padding: 120px 0;
+  display: flex;
+  align-items: center;
   background: $yellow;
   color: $ink;
 }
