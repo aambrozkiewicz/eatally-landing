@@ -24,6 +24,7 @@
     />
     <link rel="stylesheet" href="/src/style.scss" />
     <link rel="stylesheet" href="/src/review-adjustments.scss" />
+    <link rel="stylesheet" href="/src/hero-orders.scss" />
   </head>
   <body>
     <a class="skip" href="#main">Przejdź do treści</a>
@@ -95,35 +96,18 @@
               sprzedaży
             </p>
           </div>
-          <div
-            class="today-card"
-            aria-label="Przykładowe zestawienie zamówień na dziś"
-          >
-            <div class="card-head">
-              <span><i></i> Zamówienia na dziś</span><b>TECHPOL</b>
+          <div class="order-scene" data-order-scene>
+            <div class="order-assembly">
+              <svg class="assembly-border" viewBox="0 0 500 500" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="498" height="498" rx="16" pathLength="1" /></svg>
+              <div class="assembly-heading"><span>Zamówienia na dziś</span><small>TECHPOL · 12 SIERPNIA</small></div>
+              <div class="stacked-orders">
+                <article class="stacked-order"><span class="order-avatar">AK</span><div><small>Ania Kowalska <span>09:41</span></small><strong>Kurczak teriyaki</strong><p>1 posiłek · opłacone <span>✓</span></p></div><b>32 zł</b></article>
+                <article class="stacked-order"><span class="order-avatar">MN</span><div><small>Marek Nowak <span>09:43</span></small><strong>Schabowy + ziemniaki</strong><p>1 posiłek · opłacone <span>✓</span></p></div><b>29 zł</b></article>
+                <article class="stacked-order"><span class="order-avatar">KW</span><div><small>Kasia Wiśniewska <span>09:45</span></small><strong>Makaron wege</strong><p>1 posiłek · opłacone <span>✓</span></p></div><b>27 zł</b></article>
+              </div>
+              <div class="assembly-summary"><div><small>ŁĄCZNIE POSIŁKÓW</small><strong>3 <span>posiłki</span></strong></div><div><small>WARTOŚĆ ZAMÓWIEŃ</small><strong>88 <span>zł</span></strong></div></div>
             </div>
-            <div class="card-date">
-              Wtorek, 12 sierpnia <span>ZAMKNIĘTE 10:00</span>
-            </div>
-            <ul class="order-lines">
-              <li>
-                <span><b>28</b> Schabowy + ziemniaki</span><small>× 28</small>
-              </li>
-              <li>
-                <span><b>14</b> Kurczak teriyaki</span><small>× 14</small>
-              </li>
-              <li>
-                <span><b>07</b> Makaron wege</span><small>× 7</small>
-              </li>
-            </ul>
-            <div class="total">
-              <span><small>ŁĄCZNIE</small><strong>49 posiłków</strong></span
-              ><span class="status">Gotowe dla kuchni ✓</span>
-            </div>
-            <div class="delivery">
-              <span>⌖ <b>TechPol</b>, ul. Przemysłowa 12</span
-              ><span>→ Dostawa 12:30</span>
-            </div>
+            <div class="assembly-footer"><span>Przykładowe zamówienia</span><button class="scene-toggle" type="button" data-motion-toggle aria-label="Wstrzymaj animację zamówień">Ⅱ Wstrzymaj</button></div>
           </div>
         </div>
       </section>
@@ -519,6 +503,7 @@
       </div>
     </dialog>
 
+    <script type="module" src="/src/hero-orders.js"></script>
     <script>
       const header = document.querySelector(".header");
       addEventListener(
