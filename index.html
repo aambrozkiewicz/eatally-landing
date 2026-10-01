@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/style.scss" />
@@ -62,7 +62,7 @@
               <path
                 d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
               /></svg></a
-          ><a class="button dark small" href="#kontakt" data-contact-modal
+          ><a class="button secondary small" href="#kontakt" data-contact-modal
             >Umów demo</a
           >
         </div>
@@ -87,7 +87,7 @@
             </p>
             <div class="actions">
               <a class="button primary" href="#start">Utwórz stronę cateringu</a
-              ><a class="button ghost" href="#kontakt" data-contact-modal
+              ><a class="button secondary" href="#kontakt" data-contact-modal
                 >Umów demo</a
               >
             </div>
@@ -98,15 +98,61 @@
           </div>
           <div class="order-scene" data-order-scene>
             <div class="order-assembly">
-              <div class="assembly-heading"><span>Zamówienia na dziś</span><small>TECHPOL · 12 SIERPNIA</small></div>
-              <div class="stacked-orders">
-                <article class="stacked-order"><span class="order-avatar">AK</span><div><small>Ania Kowalska <span>09:41</span></small><strong>Kurczak teriyaki</strong><p>1 posiłek · opłacone <span>✓</span></p></div><b>32 zł</b></article>
-                <article class="stacked-order"><span class="order-avatar">MN</span><div><small>Marek Nowak <span>09:43</span></small><strong>Schabowy + ziemniaki</strong><p>1 posiłek · opłacone <span>✓</span></p></div><b>29 zł</b></article>
-                <article class="stacked-order"><span class="order-avatar">KW</span><div><small>Kasia Wiśniewska <span>09:45</span></small><strong>Makaron wege</strong><p>1 posiłek · opłacone <span>✓</span></p></div><b>27 zł</b></article>
+              <div class="assembly-heading">
+                <span>Zamówienia na dziś</span
+                ><small>TECHPOL · 12 SIERPNIA</small>
               </div>
-              <div class="assembly-summary"><div><small>ŁĄCZNIE POSIŁKÓW</small><strong>3 <span>posiłki</span></strong></div><div><small>WARTOŚĆ ZAMÓWIEŃ</small><strong>88 <span>zł</span></strong></div></div>
+              <div class="stacked-orders">
+                <article class="stacked-order">
+                  <span class="order-avatar">AK</span>
+                  <div>
+                    <small>Ania Kowalska <span>09:41</span></small
+                    ><strong>Kurczak teriyaki</strong>
+                    <p>1 posiłek · opłacone <span>✓</span></p>
+                  </div>
+                  <b>32 zł</b>
+                </article>
+                <article class="stacked-order">
+                  <span class="order-avatar">MN</span>
+                  <div>
+                    <small>Marek Nowak <span>09:43</span></small
+                    ><strong>Schabowy + ziemniaki</strong>
+                    <p>1 posiłek · opłacone <span>✓</span></p>
+                  </div>
+                  <b>29 zł</b>
+                </article>
+                <article class="stacked-order">
+                  <span class="order-avatar">KW</span>
+                  <div>
+                    <small>Kasia Wiśniewska <span>09:45</span></small
+                    ><strong>Makaron wege</strong>
+                    <p>1 posiłek · opłacone <span>✓</span></p>
+                  </div>
+                  <b>27 zł</b>
+                </article>
+              </div>
+              <div class="assembly-summary">
+                <div>
+                  <small>ŁĄCZNIE POSIŁKÓW</small
+                  ><strong>3 <span>posiłki</span></strong>
+                </div>
+                <div>
+                  <small>WARTOŚĆ ZAMÓWIEŃ</small
+                  ><strong>88 <span>zł</span></strong>
+                </div>
+              </div>
             </div>
-            <div class="assembly-footer"><span>Przykładowe zamówienia</span><button class="scene-toggle" type="button" data-motion-toggle aria-label="Wstrzymaj animację zamówień">Ⅱ Wstrzymaj</button></div>
+            <div class="assembly-footer">
+              <span>Przykładowe zamówienia</span
+              ><button
+                class="scene-toggle"
+                type="button"
+                data-motion-toggle
+                aria-label="Wstrzymaj animację zamówień"
+              >
+                Ⅱ Wstrzymaj
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -390,7 +436,7 @@
               Twoją marką
             </p>
           </div>
-          <a class="button dark" href="#kontakt" data-contact-modal
+          <a class="button secondary" href="#kontakt" data-contact-modal
             >Umów bezpłatne demo →</a
           >
         </div>
@@ -411,11 +457,6 @@
               Podaj nazwę, wybierz adres i zacznij korzystać. Bez czekania na
               wdrożenie, bez uzupełniania menu na start.
             </p>
-            <ol class="launch-steps" aria-label="Jak utworzyć stronę">
-              <li><span>01</span><strong>Podajesz nazwę cateringu</strong></li>
-              <li><span>02</span><strong>Wybierasz swój adres</strong></li>
-              <li><span>03</span><strong>Strona jest gotowa</strong></li>
-            </ol>
           </div>
           <div class="launch-result">
             <div class="launch-window">
@@ -550,9 +591,13 @@
           });
           if (!response.ok) throw new Error();
           form.reset();
+          status.classList.remove("is-error");
+          status.classList.add("is-success");
           status.textContent = "Dziękujemy. Odezwiemy się wkrótce.";
           button.textContent = "Wysłano ✓";
         } catch {
+          status.classList.remove("is-success");
+          status.classList.add("is-error");
           status.textContent =
             "Nie udało się wysłać. Napisz: eatally@ambrozkiewicz.com";
           button.disabled = false;

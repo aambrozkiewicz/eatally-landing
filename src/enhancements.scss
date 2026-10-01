@@ -111,8 +111,7 @@ $line: #d9d5c9;
 .week-selector-top span {
   color: $muted;
   font:
-    500 8px "DM Mono",
-    monospace;
+    500 8px var(--ea-font-data);
   letter-spacing: 0.8px;
 }
 .week-selector-top strong {
@@ -152,8 +151,7 @@ $line: #d9d5c9;
 }
 .day-buttons button small {
   font:
-    500 7px "DM Mono",
-    monospace;
+    500 7px var(--ea-font-data);
   color: $muted;
 }
 .day-buttons button b {
@@ -183,8 +181,7 @@ $line: #d9d5c9;
   gap: 7px;
   color: $muted !important;
   font:
-    500 8px "DM Mono",
-    monospace !important;
+    500 8px var(--ea-font-data) !important;
 }
 .selector-note span {
   width: 6px;
@@ -277,8 +274,7 @@ $line: #d9d5c9;
   background: $yellow;
   color: $ink;
   font:
-    500 10px "DM Mono",
-    monospace;
+    500 10px var(--ea-font-data);
 }
 .integration-note > .email-badge {
   font-size: 7px;
@@ -381,7 +377,7 @@ $line: #d9d5c9;
   top: 18px;
   right: 28px;
   color: $yellow;
-  font-family: "Newsreader", serif;
+  font-family: var(--ea-font-display);
   font-size: 82px;
   line-height: 1;
 }
@@ -389,7 +385,7 @@ $line: #d9d5c9;
   position: relative;
   max-width: 900px;
   margin: 0 0 24px;
-  font-family: "Newsreader", serif;
+  font-family: var(--ea-font-display);
   font-size: clamp(27px, 2.7vw, 34px);
   font-weight: 500;
   line-height: 1.08;
@@ -407,7 +403,7 @@ $line: #d9d5c9;
   place-items: center;
   border-radius: 50%;
   background: $yellow;
-  font: 500 11px "DM Mono", monospace;
+  font: 500 11px var(--ea-font-data);
 }
 .testimonial-card figcaption > span:last-child {
   display: grid;
@@ -647,7 +643,7 @@ $line: #d9d5c9;
 .site-footer .footer-label {
   margin: 0 0 22px;
   color: #85877d;
-  font: 500 10px/1 "DM Mono", monospace;
+  font: 500 10px/1 var(--ea-font-data);
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
