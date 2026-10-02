@@ -6,7 +6,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, "index.html"),
-        "design-system": resolve(import.meta.dirname, "design-system.html"),
       },
     },
   },

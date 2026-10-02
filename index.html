@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#f6f2e8" />
     <meta name="color-scheme" content="light" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Eatally" />
     <title>Eatally — system zamówień dla cateringów obsługujących firmy</title>
@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="/src/style.scss" />
     <link rel="stylesheet" href="/src/review-adjustments.scss" />
     <link rel="stylesheet" href="/src/hero-orders.scss" />
+    <script
+      defer
+      src="https://pulse.ambrozkiewicz.com/tracker.js"
+      data-site="eatally-landing"
+    ></script>
   </head>
   <body>
     <a class="skip" href="#main">Przejdź do treści</a>
@@ -113,11 +118,15 @@
                   </div>
                   <div class="order-meta">
                     <div class="order-tags">
-                      <span class="order-tag order-tag--online">Płatność on-line</span>
+                      <span class="order-tag order-tag--online"
+                        >Płatność on-line</span
+                      >
                       <span class="order-payment-status">✓ Opłacone</span>
                     </div>
                     <p class="order-delivery"><span>Dostawa do biura</span></p>
-                    <p class="order-delivery-detail">12:00–12:30 · recepcja, parter</p>
+                    <p class="order-delivery-detail">
+                      12:00–12:30 · recepcja, parter
+                    </p>
                   </div>
                 </article>
                 <article class="stacked-order">
@@ -129,11 +138,15 @@
                   </div>
                   <div class="order-meta">
                     <div class="order-tags">
-                      <span class="order-tag order-tag--cash">Płatność gotówką</span>
+                      <span class="order-tag order-tag--cash"
+                        >Płatność gotówką</span
+                      >
                       <span class="order-payment-status">Przy odbiorze</span>
                     </div>
                     <p class="order-delivery"><span>Odbiór osobisty</span></p>
-                    <p class="order-delivery-detail">12:15 · punkt w kantynie</p>
+                    <p class="order-delivery-detail">
+                      12:15 · punkt w kantynie
+                    </p>
                   </div>
                 </article>
                 <article class="stacked-order">
@@ -145,22 +158,40 @@
                   </div>
                   <div class="order-meta">
                     <div class="order-tags">
-                      <span class="order-tag order-tag--online">Płatność on-line</span>
+                      <span class="order-tag order-tag--online"
+                        >Płatność on-line</span
+                      >
                       <span class="order-payment-status">✓ Opłacone</span>
                     </div>
                     <p class="order-delivery"><span>Dostawa pod drzwi</span></p>
-                    <p class="order-delivery-detail">12:30–13:00 · piętro 2, pokój 204</p>
+                    <p class="order-delivery-detail">
+                      12:30–13:00 · piętro 2, pokój 204
+                    </p>
                   </div>
                 </article>
               </div>
               <div class="assembly-summary">
                 <div>
                   <small>ŁĄCZNIE POSIŁKÓW</small
-                  ><strong><span data-meal-count style="font:inherit;letter-spacing:inherit">0</span> <span data-meal-label>posiłków</span></strong>
+                  ><strong
+                    ><span
+                      data-meal-count
+                      style="font: inherit; letter-spacing: inherit"
+                      >0</span
+                    >
+                    <span data-meal-label>posiłków</span></strong
+                  >
                 </div>
                 <div>
                   <small>WARTOŚĆ ZAMÓWIEŃ</small
-                  ><strong><span data-order-total style="font:inherit;letter-spacing:inherit">0</span> <span>zł</span></strong>
+                  ><strong
+                    ><span
+                      data-order-total
+                      style="font: inherit; letter-spacing: inherit"
+                      >0</span
+                    >
+                    <span>zł</span></strong
+                  >
                 </div>
               </div>
             </div>
@@ -585,6 +616,7 @@
         el.addEventListener("click", (e) => {
           e.preventDefault();
           dialog.showModal();
+          window.analytics?.track("open_contact", { form: "contact" });
           requestAnimationFrame(() =>
             dialog
               .querySelector("#contact-title")
@@ -617,6 +649,7 @@
           status.classList.add("is-success");
           status.textContent = "Dziękujemy. Odezwiemy się wkrótce.";
           button.textContent = "Wysłano ✓";
+          window.analytics?.track("send_contact", { form: "contact" });
         } catch {
           status.classList.remove("is-success");
           status.classList.add("is-error");
