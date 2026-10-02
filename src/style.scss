@@ -196,9 +196,7 @@ h3 {
   background: $white;
   border: 1px solid #c9c4b7;
   border-radius: 8px;
-  box-shadow:
-    18px 22px 0 $yellow,
-    0 30px 65px rgba(36, 32, 22, 0.16);
+  box-shadow: none;
   transform: rotate(1deg);
 }
 .card-head,
@@ -327,7 +325,7 @@ h3 {
   background: $white;
   color: $ink;
   border-radius: 5px;
-  box-shadow: 0 16px 40px #0004;
+  box-shadow: none;
 }
 .messages time {
   font: 500 8px var(--ea-font-data);
@@ -468,7 +466,7 @@ h3 {
   padding: 32px;
   background: $white;
   border: 1px solid $line;
-  box-shadow: 10px 10px 0 $mint;
+  box-shadow: none;
 }
 .sheet-label {
   font: 500 8px var(--ea-font-data);
@@ -532,7 +530,7 @@ h3 {
   background: $white;
   border: 1px solid #a98b26;
   border-radius: 10px;
-  box-shadow: 18px 18px 0 $orange;
+  box-shadow: none;
   transform: rotate(1.2deg);
   overflow: hidden;
 }
@@ -581,7 +579,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   background: $white;
-  box-shadow: 0 12px 24px #0001;
+  box-shadow: none;
   font-size: 11px;
 }
 .mini-dish span {
@@ -627,7 +625,7 @@ h3 {
 .company-table {
   background: $white;
   border: 1px solid $line;
-  box-shadow: 12px 12px 0 $orange;
+  box-shadow: none;
 }
 .table-head {
   padding: 22px;
@@ -781,7 +779,7 @@ h3 {
   border-radius: 50%;
   background: $yellow;
   color: $ink;
-  box-shadow: 0 0 0 8px rgba(246, 201, 69, 0.16);
+  box-shadow: none;
   font-size: 28px;
 }
 .kitchen-pin b,
@@ -809,7 +807,7 @@ h3 {
   border-radius: 50% 50% 50% 0;
   background: $white;
   transform: rotate(-45deg);
-  box-shadow: 0 0 0 7px rgba(237, 104, 71, 0.16);
+  box-shadow: none;
 }
 .client-pin span {
   margin-top: 4px;
@@ -827,7 +825,7 @@ h3 {
   gap: 12px;
   border: 1px solid #56584f;
   background: rgba(23, 25, 21, 0.9);
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: none;
   backdrop-filter: blur(8px);
 }
 .zone-price span {
@@ -864,7 +862,7 @@ h3 {
   border: 1px solid #ba992d;
   background: $yellow;
   color: $ink;
-  box-shadow: 10px 10px 0 $orange;
+  box-shadow: none;
   transform: rotate(1.5deg);
 }
 .price-result span {
@@ -1036,7 +1034,7 @@ h3 {
   font: 600 9px var(--ea-font-data);
   letter-spacing: 1px;
   transform: rotate(4deg);
-  box-shadow: 5px 5px 0 $ink;
+  box-shadow: none;
 }
 .launch-window {
   overflow: hidden;
@@ -1082,7 +1080,7 @@ h3 {
   height: 8px;
   border-radius: 50%;
   background: #79a51e;
-  box-shadow: 0 0 0 0 rgba(121, 165, 30, 0.5);
+  box-shadow: none;
   animation: online-pulse 2s infinite;
 }
 .launch-window-body {
@@ -1123,11 +1121,11 @@ h3 {
   border-width: 2px;
   border-color: $ink;
   font-size: 15px;
-  box-shadow: 0 8px 20px rgba(73, 56, 4, 0.2);
+  box-shadow: none;
 }
 .launch-button:hover:not(:disabled) {
   border-color: $ink;
-  box-shadow: 0 11px 24px rgba(73, 56, 4, 0.24);
+  box-shadow: none;
 }
 .contact-consent {
   margin: 24px 8px 0;
@@ -1138,10 +1136,10 @@ h3 {
 }
 @keyframes online-pulse {
   70% {
-    box-shadow: 0 0 0 8px rgba(121, 165, 30, 0);
+    box-shadow: none;
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(121, 165, 30, 0);
+    box-shadow: none;
   }
 }
 footer {
@@ -1171,7 +1169,7 @@ footer a:not(.logo) {
   border-radius: 12px;
   background: $ink;
   color: $white;
-  box-shadow: 0 30px 90px #0007;
+  box-shadow: none;
 }
 .contact-dialog::backdrop {
   background: #171915aa;
@@ -1382,7 +1380,7 @@ footer a:not(.logo) {
     flex-direction: column;
   }
   .today-card {
-    box-shadow: 8px 10px 0 $yellow;
+    box-shadow: none;
   }
   .card-date,
   .delivery,
@@ -1471,7 +1469,7 @@ footer a:not(.logo) {
     font-size: 47px;
   }
   .brand-browser {
-    box-shadow: 8px 9px 0 $orange;
+    box-shadow: none;
   }
   .brand-page {
     min-height: 330px;
