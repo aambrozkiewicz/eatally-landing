@@ -1129,28 +1129,6 @@ h3 {
   border-color: $ink;
   box-shadow: 0 11px 24px rgba(73, 56, 4, 0.24);
 }
-.launch-button span {
-  width: 30px;
-  height: 30px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: 50%;
-  background: $white;
-  font-size: 18px;
-  line-height: 1;
-  transition: transform 0.18s ease;
-}
-.launch-button:hover span {
-  transform: translateX(3px);
-}
-@media (prefers-reduced-motion: reduce) {
-  .launch-button span {
-    transition: none;
-  }
-  .launch-button:hover span {
-    transform: none;
-  }
-}
 .contact-consent {
   margin: 24px 8px 0;
   color: #554815;
