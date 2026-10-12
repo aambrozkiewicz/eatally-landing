@@ -6,7 +6,7 @@ html{background:#f6f2e8;color-scheme:light}
 .contact-form label>span{display:flex;align-items:baseline;gap:6px}
 
 #jak-dziala,#mozliwosci,#o-nas{scroll-margin-top:74px}
-#jak-dziala,#mozliwosci,#o-nas{height:calc(100dvh - 74px);padding-block:0;display:flex;align-items:center}
+#jak-dziala,#o-nas{height:calc(100dvh - 74px);padding-block:0;display:flex;align-items:center}
 
 .login{display:inline-flex;align-items:center;gap:7px}
 .login svg{width:14px;height:14px}
@@ -47,7 +47,7 @@ footer .wrap{justify-content:center}
 footer a:not(.logo){margin-left:0}
 
 @media(max-width:900px){
-  #jak-dziala,#mozliwosci,#o-nas{height:auto;min-height:calc(100dvh - 74px);padding-block:85px}
+  #jak-dziala,#o-nas{height:auto;min-height:calc(100dvh - 74px);padding-block:85px}
   .hero{height:auto;min-height:calc(100dvh - 74px)}
   .hero-grid{height:auto;min-height:auto;padding-block:55px 70px}
   .proof-grid{grid-template-columns:1fr;gap:32px}
@@ -55,7 +55,7 @@ footer a:not(.logo){margin-left:0}
 }
 @media(max-width:650px){
   #jak-dziala,#mozliwosci,#o-nas{scroll-margin-top:66px}
-  #jak-dziala,#mozliwosci,#o-nas{min-height:calc(100dvh - 66px)}
+  #jak-dziala,#o-nas{min-height:calc(100dvh - 66px)}
   .hero{min-height:calc(100dvh - 66px)}
   .hero h1{font-size:42px;letter-spacing:-2.2px}
   .hero .lead{font-size:14px}

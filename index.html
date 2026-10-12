@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="/src/style.scss" />
     <link rel="stylesheet" href="/src/review-adjustments.scss" />
     <link rel="stylesheet" href="/src/hero-orders.scss" />
+    <link rel="stylesheet" href="/src/custom-pages.scss" />
+    <link rel="stylesheet" href="/src/feature-explorer.scss" />
     <script
       defer
       src="https://pulse.ambrozkiewicz.com/tracker.js"
@@ -292,7 +294,22 @@
         </div>
       </section>
 
-      <section class="white-label">
+
+
+
+
+      <section class="feature-explorer" id="mozliwosci" aria-labelledby="feature-explorer-title" data-feature-explorer data-active="brand">
+        <div class="wrap feature-explorer-heading">
+          <p class="eyebrow">Twoja strona. Więcej możliwości.</p>
+          <h2 id="feature-explorer-title">Odkryj możliwości.</h2>
+          <div class="feature-tabs" role="tablist" aria-label="Poznaj możliwości Eatally">
+            <button type="button" role="tab" id="feature-tab-brand" aria-controls="feature-view-brand" aria-selected="true" data-feature-tab="brand"><span>01</span> Twoja marka</button>
+            <button type="button" role="tab" id="feature-tab-zones" aria-controls="feature-view-zones" aria-selected="false" tabindex="-1" data-feature-tab="zones"><span>02</span> Strefy dowozu</button>
+            <button type="button" role="tab" id="feature-tab-pages" aria-controls="feature-view-pages" aria-selected="false" tabindex="-1" data-feature-tab="pages"><span>03</span> Własne podstrony</button>
+          </div>
+        </div>
+        <div class="feature-views">
+      <div class="feature-view white-label" id="feature-view-brand" role="tabpanel" aria-labelledby="feature-tab-brand" tabindex="0">
         <div class="wrap wl-grid">
           <div class="wl-copy">
             <p class="eyebrow">White-label</p>
@@ -317,44 +334,8 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="companies" id="mozliwosci">
-        <div class="wrap companies-grid">
-          <div>
-            <p class="eyebrow">Wiele firm, jeden panel</p>
-            <h2>Wszystkie firmy w jednym miejscu.</h2>
-            <p>
-              Obsługujesz 3 firmy czy 30? Każda może mieć własne zasady
-              zamawiania, menu, adresy dostawy i pracowników.
-            </p>
-          </div>
-          <div class="company-table">
-            <div class="table-head">
-              <b>Dzisiaj · 12 sierpnia</b
-              ><span>102 posiłki do przygotowania</span>
-            </div>
-            <div class="tr labels">
-              <span>Firma</span><span>Zamówienia</span><span>Cut-off</span
-              ><span>Dostawa</span>
-            </div>
-            <div class="tr">
-              <b>TechPol</b><strong>49</strong><span>10:00</span
-              ><span>12:30</span>
-            </div>
-            <div class="tr">
-              <b>LogisPro</b><strong>31</strong><span>09:30</span
-              ><span>11:45</span>
-            </div>
-            <div class="tr">
-              <b>ABC Office</b><strong>22</strong><span>10:30</span
-              ><span>13:00</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="delivery-zones" aria-labelledby="delivery-zones-title">
+      </div>
+      <div class="feature-view delivery-zones" id="feature-view-zones" role="tabpanel" aria-labelledby="feature-tab-zones" tabindex="0" aria-hidden="true" inert>
         <div class="wrap delivery-zones-grid">
           <div class="zones-copy">
             <p class="eyebrow light">Strefy dowozu</p>
@@ -404,6 +385,71 @@
               <small>Strefa 2 · naliczono automatycznie</small>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="feature-view custom-pages" id="feature-view-pages" role="tabpanel" aria-labelledby="feature-tab-pages" tabindex="0" aria-hidden="true" inert>
+        <div class="wrap custom-pages-grid">
+          <div class="pages-copy">
+            <p class="eyebrow">Własne podstrony · Twoja historia</p>
+            <h2 id="custom-pages-title">Daj się poznać.<br /><em>I zapamiętać.</em></h2>
+            <p>Twoja strona może pokazywać znacznie więcej niż menu. Twórz dodatkowe podstrony z własną treścią, opisz zakres swojej oferty i pokaż odwiedzającym, dlaczego warto wybrać właśnie Ciebie.</p>
+            <ul class="pages-benefits">
+              <li><span>01</span> Opowiedz o swojej kuchni i ludziach.</li>
+              <li><span>02</span> Wyeksponuj catering, ofertę dla firm lub wydarzenia.</li>
+              <li><span>03</span> Pokaż, co oferujesz i dla kogo gotujesz.</li>
+            </ul>
+            <a class="button secondary" href="#kontakt" data-contact-modal>Zobacz możliwości na demo ↗</a>
+          </div>
+          <div class="pages-showcase" data-pages-showcase>
+            <div class="pages-orbit" aria-hidden="true"></div>
+            <div class="pages-browser">
+              <div class="pages-browser-bar"><span class="pages-dots" aria-hidden="true">● ● ●</span><span>twoja-kuchnia.eatally.pl</span><span aria-hidden="true">↗</span></div>
+              <div class="pages-preview">
+                <div class="pages-preview-header"><strong>dobry stół<span>kuchnia z charakterem</span></strong><span aria-hidden="true">EST. 2016</span></div>
+                <div class="pages-tabs" role="tablist" aria-label="Przykładowe podstrony">
+                  <button type="button" role="tab" id="page-tab-about" aria-selected="true" aria-controls="page-preview-content" data-page="about">O nas</button>
+                  <button type="button" role="tab" id="page-tab-business" aria-selected="false" aria-controls="page-preview-content" tabindex="-1" data-page="business">Dla firm</button>
+                  <button type="button" role="tab" id="page-tab-events" aria-selected="false" aria-controls="page-preview-content" tabindex="-1" data-page="events">Na wydarzenia</button>
+                </div>
+                <div class="pages-preview-content" id="page-preview-content" role="tabpanel" aria-labelledby="page-tab-about">
+                  <div class="pages-preview-copy"><small data-page-kicker>POZNAJ NASZĄ KUCHNIĘ</small><h3 data-page-title>Dobry smak.<br />Dobrzy ludzie.</h3><p data-page-description>Gotujemy sezonowo, lokalnie i z sercem. Tak, jak lubisz najbardziej.</p><span class="pages-preview-cta" data-page-cta>Nasza historia ↗</span></div>
+                  <div class="pages-illustration" aria-hidden="true">
+                    <svg viewBox="0 0 220 250" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="110" cy="125" r="85" fill="#cbd8af" stroke="none"/>
+                      <g data-page-art="about">
+                        <path d="M79 89C58 85 60 56 81 56C87 32 122 32 129 56C154 49 169 79 147 90L143 110H82Z" fill="#fffdf7"/>
+                        <path d="M88 111V134C88 162 132 162 132 134V111" fill="#edb78e"/>
+                        <path d="M95 129H96M123 129H124M103 141Q110 147 117 141"/>
+                        <path d="M60 205V187Q60 165 87 163L110 182L133 163Q160 165 160 187V205" fill="#fffdf7"/>
+                        <path d="M92 168L87 205M128 168L133 205M101 191H119"/>
+                        <path d="M52 116V143M44 116V131Q44 140 52 140Q60 140 60 131V116M52 143V171M175 116V171M175 116Q159 128 175 144"/>
+                      </g>
+                      <g data-page-art="business" hidden>
+                        <path d="M54 199V65H147V199" fill="#fffdf7"/>
+                        <path d="M147 105H173V199M42 199H183"/>
+                        <path d="M72 85H85V98H72ZM112 85H125V98H112ZM72 118H85V131H72ZM112 118H125V131H112ZM89 199V165H113V199" fill="#aebe8a"/>
+                        <rect x="117" y="145" width="76" height="48" rx="9" fill="#edb78e"/>
+                        <path d="M139 145V137H171V145M117 161H193M149 161V169H161V161"/>
+                      </g>
+                      <g data-page-art="events" hidden>
+                        <path d="M45 157H177L188 189H34ZM52 189V213M168 189V213" fill="#fffdf7"/>
+                        <ellipse cx="110" cy="170" rx="27" ry="9" fill="#cbd8af"/>
+                        <path d="M64 154V127M55 107H73L70 123Q64 132 58 123ZM157 154V127M148 107H166L163 123Q157 132 151 123Z" fill="#edb78e"/>
+                        <path d="M103 151V121H117V151" fill="#edb78e"/>
+                        <path d="M110 116Q98 106 110 95Q122 106 110 116Z" fill="#ed6847" stroke="none"/>
+                        <path d="M48 52Q110 86 172 52M68 62L74 83L88 70M103 74L113 92L123 74M140 68L156 82L160 61"/>
+                        <path d="M38 94L43 99M179 95L184 90M93 43V49" stroke="#ed6847"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div class="pages-preview-footer"><span data-page-footer>Sezonowe składniki. Własne przepisy. Nasz charakter.</span><span aria-hidden="true">✳︎</span></div>
+              </div>
+            </div>
+            <p class="pages-demo-caption">Przykładowe podstrony · odkryj treść każdej zakładki</p>
+          </div>
+        </div>
+      </div>
         </div>
       </section>
 
@@ -595,6 +641,8 @@
     </dialog>
 
     <script type="module" src="/src/hero-orders.js"></script>
+    <script type="module" src="/src/custom-pages.js"></script>
+    <script type="module" src="/src/feature-explorer.js"></script>
     <script>
       const header = document.querySelector(".header");
       addEventListener(
