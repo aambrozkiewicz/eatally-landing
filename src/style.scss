@@ -1654,7 +1654,12 @@ h3 {
 }
 
 .product-demo {
-  min-height: 100dvh;
+  min-height: calc(100dvh - 74px);
+
+  @media (max-width: 650px) {
+    min-height: calc(100dvh - 66px);
+  }
+
   display: grid;
   align-items: center;
   padding-block: clamp(56px, 8vw, 104px);
