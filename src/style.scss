@@ -1712,7 +1712,7 @@ h3 {
   &:nth-child(2) {
     background: $orange;
     color: $white;
-    border-color: $orange;
+    // border-color: $orange;
 
     .eyebrow {
       background: $yellow;
@@ -1739,6 +1739,10 @@ h3 {
     margin-top: auto;
     background: $white;
     border-color: #000;
+
+    &.secondary:hover {
+      border-color: #000;
+    }
   }
 }
 
