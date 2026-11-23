@@ -41,7 +41,6 @@ html{background:#f6f2e8;color-scheme:light}
 
 .feature-grid article,.feature-grid article:not(:nth-child(3n+1)){padding:30px 32px;transition:background-color .28s ease}
 .feature-grid article:hover{background:#f5f2e9}
-.feature-grid article>span{display:block;font:600 22px/1 var(--ea-font-data);letter-spacing:-1px}
 
 footer .wrap{justify-content:center}
 footer a:not(.logo){margin-left:0}
@@ -62,7 +61,7 @@ footer a:not(.logo){margin-left:0}
   .ownership div{grid-template-columns:66px 1fr}
   .ownership div+div{padding-left:0}
   .ownership svg{width:52px;height:52px;padding:12px;box-shadow:none}
-  .flow li>b,.feature-grid article>span{font-size:19px}
+  .flow li>b{font-size:19px}
   .proof-story>p{font-size:15px}
   .proof-quote{padding:27px 23px;box-shadow:none}
   .proof-quote blockquote{font-size:22px}

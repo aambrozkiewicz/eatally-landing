@@ -374,10 +374,7 @@ h3 {
   font-style: italic;
   transform: rotate(-8deg);
 }
-.solution-number {
-  font: 500 9px var(--ea-font-data);
-  color: $yellow;
-}
+
 .solution h2,
 .section-title h2,
 .companies h2 {
@@ -396,16 +393,8 @@ h3 {
   color: $white;
   font-weight: 700;
 }
-.mantra {
-  margin-top: 38px;
-  padding-top: 24px;
-  display: flex;
-  gap: 22px;
-  border-top: 1px solid #3d3f38;
-}
-.mantra b {
-  font-size: 12px;
-}
+
+
 .process {
   padding: 125px 0;
 }
@@ -901,12 +890,9 @@ h3 {
 .feature-grid article:not(:nth-child(3n + 1)) {
   padding-left: 32px;
 }
-.feature-grid span {
-  font: 500 9px var(--ea-font-data);
-  color: $orange;
-}
+
 .feature-grid h3 {
-  margin: 55px 0 10px;
+  margin: 0 0 10px;
   font-size: 25px;
 }
 .feature-grid p {
@@ -1031,46 +1017,12 @@ h3 {
   background: $white;
   box-shadow: none;
 }
-.launch-window-bar {
-  min-height: 50px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid $line;
-  background: #f5f2e9;
-}
-.window-dots {
-  display: flex;
-  gap: 6px;
-}
-.window-dots i {
-  width: 8px;
-  height: 8px;
-  border: 1px solid $ink;
-  border-radius: 50%;
-  background: $white;
-}
-.window-dots i:first-child {
-  background: $orange;
-}
-.live-status {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #46620d;
-  font: 600 9px var(--ea-font-data);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.live-status i {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #79a51e;
-  box-shadow: none;
-  animation: online-pulse 2s infinite;
-}
+
+
+
+
+
+
 .launch-window-body {
   min-height: 285px;
   padding: clamp(32px, 5vw, 52px);
@@ -1122,14 +1074,7 @@ h3 {
   line-height: 1.55;
   text-align: center;
 }
-@keyframes online-pulse {
-  70% {
-    box-shadow: none;
-  }
-  100% {
-    box-shadow: none;
-  }
-}
+
 footer {
   padding: 28px 0;
   background: $ink;
@@ -1424,10 +1369,7 @@ footer a:not(.logo) {
     right: 5%;
     width: 215px;
   }
-  .mantra {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+
   .flow {
     grid-template-columns: 1fr;
   }
@@ -1584,9 +1526,7 @@ footer a:not(.logo) {
   .button {
     transition: none;
   }
-  .live-status i {
-    animation: none;
-  }
+
   .delivery-route path {
     animation: none;
   }
@@ -1627,14 +1567,8 @@ h3 {
   color: var(--ea-positive);
   font-family: var(--ea-font-body);
 }
-.live-status {
-  color: var(--ea-positive);
-  font-family: var(--ea-font-body);
-}
-.live-status i {
-  background: var(--ea-positive);
-  animation: none;
-}
+
+
 .form-status.is-success,
 .form-status.is-error {
   padding: 8px 10px;
