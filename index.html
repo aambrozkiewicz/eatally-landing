@@ -1,679 +1,1027 @@
 <!doctype html>
 <html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f6f2e8" />
+    <meta name="color-scheme" content="light" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Eatally" />
+    <title>System zamówień online dla cateringów i restauracji | Eatally</title>
+    <meta
+      name="description"
+      content="System zamówień online dla cateringów i restauracji obsługujących firmy i zakłady pracy. Obsługa codziennych zamówień, kody QR dla grup, płatności on-line i lista dla kuchni."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.scss" />
+    <link rel="stylesheet" href="/src/review-adjustments.scss" />
+    <link rel="stylesheet" href="/src/hero-orders.scss" />
+    <link rel="stylesheet" href="/src/custom-pages.scss" />
+    <link rel="stylesheet" href="/src/feature-explorer.scss" />
+    <script
+      defer
+      src="https://pulse.ambrozkiewicz.com/tracker.js"
+      data-site="eatally-landing"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#f6f2e8" />
-  <meta name="color-scheme" content="light" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Eatally" />
-  <title>System zamówień online dla cateringów i restauracji | Eatally</title>
-  <meta name="description"
-    content="System zamówień online dla cateringów i restauracji obsługujących firmy i zakłady pracy. Obsługa codziennych zamówień, kody QR dla grup, płatności on-line i lista dla kuchni." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/style.scss" />
-  <link rel="stylesheet" href="/src/review-adjustments.scss" />
-  <link rel="stylesheet" href="/src/hero-orders.scss" />
-  <link rel="stylesheet" href="/src/custom-pages.scss" />
-  <link rel="stylesheet" href="/src/feature-explorer.scss" />
-  <script defer src="https://pulse.ambrozkiewicz.com/tracker.js" data-site="eatally-landing"></script>
-</head>
-
-<body>
-  <a class="skip" href="#main">Przejdź do treści</a>
-  <header class="header">
-    <div class="wrap nav">
-      <a class="logo" href="/" data-scroll-top aria-label="Eatally — strona główna">eatally</a>
-      <nav aria-label="Główna nawigacja">
-        <a href="#jak-dziala">Jak to działa</a><a href="#mozliwosci">Możliwości</a><a href="#demo">Demo</a><a
-          href="#o-nas">O nas</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="login" href="https://panel.eatally.pl/" target="_blank" rel="noopener">Zaloguj się
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 3h6v6" />
-            <path d="m10 14 11-11" />
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-          </svg></a><a class="button secondary small" href="#kontakt" data-contact-modal>Umów demo</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <h1>System zamówień dla <em>cateringów obsługujących firmy</em></h1>
-          <p class="lead">
-            Pracownicy wybierają posiłki z Twojego menu. Eatally zamyka zamówienia
-            o ustalonej godzinie i przygotowuje listę dla kuchni i dostawy.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="#start">Utwórz stronę cateringu</a><a class="button secondary"
-              href="#kontakt" data-contact-modal>Umów demo</a>
-          </div>
-          <p class="trust">
-            Twoja marka <i>·</i> Twoja subdomena <i>·</i> Bez prowizji od
-            sprzedaży
-          </p>
+  <body>
+    <a class="skip" href="#main">Przejdź do treści</a>
+    <header class="header">
+      <div class="wrap nav">
+        <a
+          class="logo"
+          href="/"
+          data-scroll-top
+          aria-label="Eatally — strona główna"
+          >eatally</a
+        >
+        <nav aria-label="Główna nawigacja">
+          <a href="#jak-dziala">Jak to działa</a
+          ><a href="#mozliwosci">Możliwości</a><a href="#demo">Demo</a
+          ><a href="#o-nas">O nas</a>
+        </nav>
+        <div class="nav-actions">
+          <a
+            class="login"
+            href="https://panel.eatally.pl/"
+            target="_blank"
+            rel="noopener"
+            >Zaloguj się
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M15 3h6v6" />
+              <path d="m10 14 11-11" />
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              /></svg></a
+          ><a class="button secondary small" href="#kontakt" data-contact-modal
+            >Umów demo</a
+          >
         </div>
-        <div class="order-scene" data-order-scene>
-          <div class="order-assembly">
-            <div class="assembly-heading">
-              <span>Zamówienia na dziś</span><small>TECHPOL · 12 SIERPNIA</small>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <h1>System zamówień dla <em>cateringów obsługujących firmy</em></h1>
+            <p class="lead">
+              Pracownicy wybierają posiłki z Twojego menu. Eatally zamyka
+              zamówienia o ustalonej godzinie i przygotowuje listę dla kuchni i
+              dostawy.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#start">Utwórz stronę cateringu</a
+              ><a class="button secondary" href="#kontakt" data-contact-modal
+                >Umów demo</a
+              >
             </div>
-            <div class="stacked-orders">
-              <article class="stacked-order">
-                <span class="order-avatar">AK</span>
-                <div class="order-main">
-                  <small>Ania Kowalska <span>09:41</span></small><strong>Kurczak teriyaki</strong>
-                  <p class="order-quantity">1 posiłek · <b>32 zł</b></p>
-                </div>
-                <div class="order-meta">
-                  <div class="order-tags">
-                    <span class="order-tag order-tag--online">Płatność on-line</span>
-                    <span class="order-payment-status">✓ Opłacone</span>
+            <p class="trust">
+              Twoja marka <i>·</i> Twoja subdomena <i>·</i> Bez prowizji od
+              sprzedaży
+            </p>
+          </div>
+          <div class="order-scene" data-order-scene>
+            <div class="order-assembly">
+              <div class="assembly-heading">
+                <span>Zamówienia na dziś</span
+                ><small>TECHPOL · 12 SIERPNIA</small>
+              </div>
+              <div class="stacked-orders">
+                <article class="stacked-order">
+                  <span class="order-avatar">AK</span>
+                  <div class="order-main">
+                    <small>Ania Kowalska <span>09:41</span></small
+                    ><strong>Kurczak teriyaki</strong>
+                    <p class="order-quantity">1 posiłek · <b>32 zł</b></p>
                   </div>
-                  <p class="order-delivery"><span>Dostawa do biura</span></p>
-                  <p class="order-delivery-detail">
-                    12:00–12:30 · recepcja, parter
-                  </p>
-                </div>
-              </article>
-              <article class="stacked-order">
-                <span class="order-avatar">MN</span>
-                <div class="order-main">
-                  <small>Marek Nowak <span>09:43</span></small><strong>Schabowy + ziemniaki</strong>
-                  <p class="order-quantity">1 posiłek · <b>29 zł</b></p>
-                </div>
-                <div class="order-meta">
-                  <div class="order-tags">
-                    <span class="order-tag order-tag--cash">Płatność gotówką</span>
-                    <span class="order-payment-status">Przy odbiorze</span>
+                  <div class="order-meta">
+                    <div class="order-tags">
+                      <span class="order-tag order-tag--online"
+                        >Płatność on-line</span
+                      >
+                      <span class="order-payment-status">✓ Opłacone</span>
+                    </div>
+                    <p class="order-delivery"><span>Dostawa do biura</span></p>
+                    <p class="order-delivery-detail">
+                      12:00–12:30 · recepcja, parter
+                    </p>
                   </div>
-                  <p class="order-delivery"><span>Odbiór osobisty</span></p>
-                  <p class="order-delivery-detail">
-                    12:15 · punkt w kantynie
-                  </p>
-                </div>
-              </article>
-              <article class="stacked-order">
-                <span class="order-avatar">KW</span>
-                <div class="order-main">
-                  <small>Kasia Wiśniewska <span>09:45</span></small><strong>Makaron wege</strong>
-                  <p class="order-quantity">1 posiłek · <b>27 zł</b></p>
-                </div>
-                <div class="order-meta">
-                  <div class="order-tags">
-                    <span class="order-tag order-tag--online">Płatność on-line</span>
-                    <span class="order-payment-status">✓ Opłacone</span>
+                </article>
+                <article class="stacked-order">
+                  <span class="order-avatar">MN</span>
+                  <div class="order-main">
+                    <small>Marek Nowak <span>09:43</span></small
+                    ><strong>Schabowy + ziemniaki</strong>
+                    <p class="order-quantity">1 posiłek · <b>29 zł</b></p>
                   </div>
-                  <p class="order-delivery"><span>Dostawa pod drzwi</span></p>
-                  <p class="order-delivery-detail">
-                    12:30–13:00 · piętro 2, pokój 204
-                  </p>
+                  <div class="order-meta">
+                    <div class="order-tags">
+                      <span class="order-tag order-tag--cash"
+                        >Płatność gotówką</span
+                      >
+                      <span class="order-payment-status">Przy odbiorze</span>
+                    </div>
+                    <p class="order-delivery"><span>Odbiór osobisty</span></p>
+                    <p class="order-delivery-detail">
+                      12:15 · punkt w kantynie
+                    </p>
+                  </div>
+                </article>
+                <article class="stacked-order">
+                  <span class="order-avatar">KW</span>
+                  <div class="order-main">
+                    <small>Kasia Wiśniewska <span>09:45</span></small
+                    ><strong>Makaron wege</strong>
+                    <p class="order-quantity">1 posiłek · <b>27 zł</b></p>
+                  </div>
+                  <div class="order-meta">
+                    <div class="order-tags">
+                      <span class="order-tag order-tag--online"
+                        >Płatność on-line</span
+                      >
+                      <span class="order-payment-status">✓ Opłacone</span>
+                    </div>
+                    <p class="order-delivery"><span>Dostawa pod drzwi</span></p>
+                    <p class="order-delivery-detail">
+                      12:30–13:00 · piętro 2, pokój 204
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="assembly-summary">
+                <div>
+                  <small>ŁĄCZNIE POSIŁKÓW</small
+                  ><strong
+                    ><span
+                      data-meal-count
+                      style="font: inherit; letter-spacing: inherit"
+                      >0</span
+                    >
+                    <span data-meal-label>posiłków</span></strong
+                  >
                 </div>
-              </article>
+                <div>
+                  <small>WARTOŚĆ ZAMÓWIEŃ</small
+                  ><strong
+                    ><span
+                      data-order-total
+                      style="font: inherit; letter-spacing: inherit"
+                      >0</span
+                    >
+                    <span>zł</span></strong
+                  >
+                </div>
+              </div>
             </div>
-            <div class="assembly-summary">
-              <div>
-                <small>ŁĄCZNIE POSIŁKÓW</small><strong><span data-meal-count
-                    style="font: inherit; letter-spacing: inherit">0</span>
-                  <span data-meal-label>posiłków</span></strong>
-              </div>
-              <div>
-                <small>WARTOŚĆ ZAMÓWIEŃ</small><strong><span data-order-total
-                    style="font: inherit; letter-spacing: inherit">0</span>
-                  <span>zł</span></strong>
-              </div>
+            <div class="assembly-footer">
+              <span>Przykładowe zamówienia</span
+              ><button
+                class="scene-toggle"
+                type="button"
+                data-motion-toggle
+                aria-label="Powtórz animację zamówień"
+              >
+                Powtórz
+              </button>
             </div>
           </div>
-          <div class="assembly-footer">
-            <span>Przykładowe zamówienia</span><button class="scene-toggle" type="button" data-motion-toggle
-              aria-label="Powtórz animację zamówień">
-              Powtórz
+        </div>
+      </section>
+
+      <section class="chaos" id="jak-dziala">
+        <div class="wrap">
+          <p class="eyebrow light">Tak wygląda codzienne zbieranie zamówień?</p>
+          <div class="chaos-grid">
+            <div
+              class="messages"
+              aria-label="Przykłady ręcznie zbieranych zamówień"
+            >
+              <article class="phone">
+                <time>8:34 · TELEFON</time>
+                <p>„Dzisiaj poprosimy 14 schabowych i 8 kurczaków.”</p>
+              </article>
+              <article class="mail">
+                <time>8:51 · FIRMA ABC</time>
+                <p>lista na dzisiaj.xlsx <span>↓</span></p>
+              </article>
+              <article class="chat">
+                <time>9:12 · WIADOMOŚĆ</time>
+                <p>„Pani Kasia jednak zmienia na wege.”</p>
+              </article>
+              <article class="phone last">
+                <time>9:47 · TELEFON</time>
+                <p>„Możemy jeszcze domówić dwa obiady?”</p>
+              </article>
+            </div>
+            <div class="solution">
+              <h2>Z Eatally wygląda to inaczej.</h2>
+              <p>
+                Każda firma otrzymuje własny dostęp do Twojego menu. Pracownicy
+                sami składają zamówienia, a o ustalonej godzinie system
+                automatycznie zamyka listę.
+              </p>
+              <p>Ty otrzymujesz gotowe zestawienie.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process">
+        <div class="wrap">
+          <div class="section-title">
+            <h2>Od menu do gotowej listy dla kuchni.</h2>
+          </div>
+          <ol class="flow">
+            <li>
+              <b>01</b>
+              <h3>Publikujesz menu</h3>
+              <p>Dodajesz dania na jutro lub cały tydzień.</p>
+            </li>
+            <li>
+              <b>02</b>
+              <h3>Pracownicy zamawiają</h3>
+              <p>Każdy wybiera swój posiłek na telefonie lub komputerze.</p>
+            </li>
+            <li>
+              <b>03</b>
+              <h3>Eatally zamyka listę</h3>
+              <p>Automatycznie, np. codziennie o 10:00.</p>
+            </li>
+            <li>
+              <b>04</b>
+              <h3>Kuchnia dostaje zestawienie</h3>
+              <p>Wiesz, ile przygotować i gdzie dostarczyć.</p>
+            </li>
+          </ol>
+          <div class="kitchen-sheet">
+            <div>
+              <p class="sheet-label">GOTOWE ZESTAWIENIE · WTOREK 12 SIERPNIA</p>
+              <h3>Firma TechPol <span>49 posiłków</span></h3>
+            </div>
+            <ul>
+              <li><span>Schabowy + ziemniaki</span><b>× 28</b></li>
+              <li><span>Kurczak teriyaki</span><b>× 14</b></li>
+              <li><span>Makaron wege</span><b>× 7</b></li>
+            </ul>
+            <button type="button">Pobierz zestawienie ↓</button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-explorer"
+        id="mozliwosci"
+        aria-labelledby="feature-explorer-title"
+        data-feature-explorer
+        data-active="brand"
+      >
+        <div class="wrap feature-explorer-heading">
+          <h2 id="feature-explorer-title">Odkryj możliwości.</h2>
+          <div
+            class="feature-tabs"
+            role="tablist"
+            aria-label="Poznaj możliwości Eatally"
+          >
+            <button
+              type="button"
+              role="tab"
+              id="feature-tab-brand"
+              aria-controls="feature-view-brand"
+              aria-selected="true"
+              data-feature-tab="brand"
+            >
+              Twoja marka
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="feature-tab-zones"
+              aria-controls="feature-view-zones"
+              aria-selected="false"
+              tabindex="-1"
+              data-feature-tab="zones"
+            >
+              Strefy dowozu
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="feature-tab-pages"
+              aria-controls="feature-view-pages"
+              aria-selected="false"
+              tabindex="-1"
+              data-feature-tab="pages"
+            >
+              Własne podstrony
             </button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="chaos" id="jak-dziala">
-      <div class="wrap">
-        <p class="eyebrow light">Tak wygląda codzienne zbieranie zamówień?</p>
-        <div class="chaos-grid">
-          <div class="messages" aria-label="Przykłady ręcznie zbieranych zamówień">
-            <article class="phone">
-              <time>8:34 · TELEFON</time>
-              <p>„Dzisiaj poprosimy 14 schabowych i 8 kurczaków.”</p>
-            </article>
-            <article class="mail">
-              <time>8:51 · FIRMA ABC</time>
-              <p>lista na dzisiaj.xlsx <span>↓</span></p>
-            </article>
-            <article class="chat">
-              <time>9:12 · WIADOMOŚĆ</time>
-              <p>„Pani Kasia jednak zmienia na wege.”</p>
-            </article>
-            <article class="phone last">
-              <time>9:47 · TELEFON</time>
-              <p>„Możemy jeszcze domówić dwa obiady?”</p>
-            </article>
-          </div>
-          <div class="solution">
-            <h2>Z Eatally wygląda to inaczej.</h2>
-            <p>
-              Każda firma otrzymuje własny dostęp do Twojego menu. Pracownicy
-              sami składają zamówienia, a o ustalonej godzinie system
-              automatycznie zamyka listę.
-            </p>
-            <p>Ty otrzymujesz gotowe zestawienie.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="process">
-      <div class="wrap">
-        <div class="section-title">
-          <h2>Od menu do gotowej listy dla kuchni.</h2>
-        </div>
-        <ol class="flow">
-          <li>
-            <b>01</b>
-            <h3>Publikujesz menu</h3>
-            <p>Dodajesz dania na jutro lub cały tydzień.</p>
-          </li>
-          <li>
-            <b>02</b>
-            <h3>Pracownicy zamawiają</h3>
-            <p>Każdy wybiera swój posiłek na telefonie lub komputerze.</p>
-          </li>
-          <li>
-            <b>03</b>
-            <h3>Eatally zamyka listę</h3>
-            <p>Automatycznie, np. codziennie o 10:00.</p>
-          </li>
-          <li>
-            <b>04</b>
-            <h3>Kuchnia dostaje zestawienie</h3>
-            <p>Wiesz, ile przygotować i gdzie dostarczyć.</p>
-          </li>
-        </ol>
-        <div class="kitchen-sheet">
-          <div>
-            <p class="sheet-label">GOTOWE ZESTAWIENIE · WTOREK 12 SIERPNIA</p>
-            <h3>Firma TechPol <span>49 posiłków</span></h3>
-          </div>
-          <ul>
-            <li><span>Schabowy + ziemniaki</span><b>× 28</b></li>
-            <li><span>Kurczak teriyaki</span><b>× 14</b></li>
-            <li><span>Makaron wege</span><b>× 7</b></li>
-          </ul>
-          <button type="button">Pobierz zestawienie ↓</button>
-        </div>
-      </div>
-    </section>
-
-
-
-
-
-    <section class="feature-explorer" id="mozliwosci" aria-labelledby="feature-explorer-title" data-feature-explorer
-      data-active="brand">
-      <div class="wrap feature-explorer-heading">
-        <h2 id="feature-explorer-title">Odkryj możliwości.</h2>
-        <div class="feature-tabs" role="tablist" aria-label="Poznaj możliwości Eatally">
-          <button type="button" role="tab" id="feature-tab-brand" aria-controls="feature-view-brand"
-            aria-selected="true" data-feature-tab="brand">Twoja marka</button>
-          <button type="button" role="tab" id="feature-tab-zones" aria-controls="feature-view-zones"
-            aria-selected="false" tabindex="-1" data-feature-tab="zones">Strefy dowozu</button>
-          <button type="button" role="tab" id="feature-tab-pages" aria-controls="feature-view-pages"
-            aria-selected="false" tabindex="-1" data-feature-tab="pages">Własne podstrony</button>
-        </div>
-      </div>
-      <div class="feature-views">
-        <div class="feature-view white-label" id="feature-view-brand" role="tabpanel"
-          aria-labelledby="feature-tab-brand" tabindex="0">
-          <div class="wrap wl-grid">
-            <div class="wl-copy">
-              <p class="eyebrow">White-label</p>
-              <h2>Twój system zamówień. <em>Nie nasz marketplace.</em></h2>
-              <p>
-                Eatally działa pod Twoją marką. Klienci zamawiają bezpośrednio u
-                Ciebie — nie przez zewnętrzną platformę.
-              </p>
-              <strong>Bez prowizji od wartości zamówień.</strong>
-            </div>
-            <div class="brand-browser">
-              <div class="browser-bar">
-                <i></i><i></i><i></i><span>zamowienia.twojcatering.pl</span>
+        <div class="feature-views">
+          <div
+            class="feature-view white-label"
+            id="feature-view-brand"
+            role="tabpanel"
+            aria-labelledby="feature-tab-brand"
+            tabindex="0"
+          >
+            <div class="wrap wl-grid">
+              <div class="wl-copy">
+                <p class="eyebrow">White-label</p>
+                <h2>Twój system zamówień. <em>Nie nasz marketplace.</em></h2>
+                <p>
+                  Eatally działa pod Twoją marką. Klienci zamawiają bezpośrednio
+                  u Ciebie — nie przez zewnętrzną platformę.
+                </p>
+                <strong>Bez prowizji od wartości zamówień.</strong>
               </div>
-              <div class="brand-page">
-                <span class="brand-logo">Smaczny<br />kociołek</span>
-                <p>DZISIAJ W MENU</p>
-                <h3>Co dobrego<br />zamawiasz?</h3>
-                <div class="mini-dish">
-                  <b>Kurczak teriyaki</b><span>32 zł +</span>
+              <div class="brand-browser">
+                <div class="browser-bar">
+                  <i></i><i></i><i></i><span>zamowienia.twojcatering.pl</span>
+                </div>
+                <div class="brand-page">
+                  <span class="brand-logo">Smaczny<br />kociołek</span>
+                  <p>DZISIAJ W MENU</p>
+                  <h3>Co dobrego<br />zamawiasz?</h3>
+                  <div class="mini-dish">
+                    <b>Kurczak teriyaki</b><span>32 zł +</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="feature-view delivery-zones" id="feature-view-zones" role="tabpanel"
-          aria-labelledby="feature-tab-zones" tabindex="0" aria-hidden="true" inert>
-          <div class="wrap delivery-zones-grid">
-            <div class="zones-copy">
-              <p class="eyebrow light">Strefy dowozu</p>
-              <h2 id="delivery-zones-title">
-                Każdy kilometr<br /><em>ma swoją cenę.</em>
-              </h2>
-              <p class="zones-lead">
-                Twórz strefy na podstawie odległości od Twojej kuchni i ustalaj
-                koszt dostawy dla każdej z nich. Gdy klient poda adres, Eatally
-                automatycznie dopasuje właściwą cenę.
-              </p>
-            </div>
+          <div
+            class="feature-view delivery-zones"
+            id="feature-view-zones"
+            role="tabpanel"
+            aria-labelledby="feature-tab-zones"
+            tabindex="0"
+            aria-hidden="true"
+            inert
+          >
+            <div class="wrap delivery-zones-grid">
+              <div class="zones-copy">
+                <p class="eyebrow light">Strefy dowozu</p>
+                <h2 id="delivery-zones-title">
+                  Każdy kilometr<br /><em>ma swoją cenę.</em>
+                </h2>
+                <p class="zones-lead">
+                  Twórz strefy na podstawie odległości od Twojej kuchni i
+                  ustalaj koszt dostawy dla każdej z nich. Gdy klient poda
+                  adres, Eatally automatycznie dopasuje właściwą cenę.
+                </p>
+              </div>
 
-            <div class="zone-map" aria-label="Przykład trzech stref dostawy">
-              <div class="map-grid" aria-hidden="true"></div>
-              <div class="range-ring range-ring-far" aria-hidden="true"></div>
-              <div class="range-ring range-ring-mid" aria-hidden="true"></div>
-              <div class="range-ring range-ring-near" aria-hidden="true"></div>
-              <svg class="delivery-route" viewBox="0 0 560 560" fill="none" aria-hidden="true">
-                <path d="M280 280C318 251 337 204 375 196C420 186 438 236 462 217" />
-              </svg>
-              <div class="kitchen-pin">
-                <span aria-hidden="true">⌂</span><b>Twoja kuchnia</b>
-              </div>
-              <div class="client-pin">
-                <i aria-hidden="true"></i><b>Klient</b><span>8,4 km</span>
-              </div>
-              <div class="zone-price zone-price-near">
-                <span>do 5 km</span><strong>0 zł</strong>
-              </div>
-              <div class="zone-price zone-price-mid">
-                <span>5–12 km</span><strong>12 zł</strong>
-              </div>
-              <div class="zone-price zone-price-far">
-                <span>12–20 km</span><strong>24 zł</strong>
-              </div>
-              <div class="price-result">
-                <span>Koszt dostawy</span>
-                <strong>12,00 zł</strong>
-                <small>Strefa 2 · naliczono automatycznie</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="feature-view custom-pages" id="feature-view-pages" role="tabpanel"
-          aria-labelledby="feature-tab-pages" tabindex="0" aria-hidden="true" inert>
-          <div class="wrap custom-pages-grid">
-            <div class="pages-copy">
-              <h2 id="custom-pages-title">Własne podstrony cateringu</h2>
-              <p>Twoja strona może pokazywać znacznie więcej niż menu. Twórz dodatkowe podstrony z własną treścią, opisz
-                zakres swojej oferty i pokaż odwiedzającym, dlaczego warto wybrać właśnie Ciebie.</p>
-              <ul class="pages-benefits">
-                <li><span>01</span> Opowiedz o swojej kuchni i ludziach.</li>
-                <li><span>02</span> Wyeksponuj catering, ofertę dla firm lub wydarzenia.</li>
-                <li><span>03</span> Pokaż, co oferujesz i dla kogo gotujesz.</li>
-              </ul>
-              <a class="button secondary" href="#demo">Wypróbuj demo</a>
-            </div>
-            <div class="pages-showcase" data-pages-showcase>
-              <div class="pages-orbit" aria-hidden="true"></div>
-              <div class="pages-browser">
-                <div class="pages-browser-bar"><span class="pages-dots" aria-hidden="true">● ●
-                    ●</span><span>twoja-kuchnia.eatally.pl</span><span aria-hidden="true">↗</span></div>
-                <div class="pages-preview">
-                  <div class="pages-preview-header"><strong>dobry stół<span>kuchnia z charakterem</span></strong><span
-                      aria-hidden="true">EST. 2016</span></div>
-                  <div class="pages-tabs" role="tablist" aria-label="Przykładowe podstrony">
-                    <button type="button" role="tab" id="page-tab-about" aria-selected="true"
-                      aria-controls="page-preview-content" data-page="about">O nas</button>
-                    <button type="button" role="tab" id="page-tab-business" aria-selected="false"
-                      aria-controls="page-preview-content" tabindex="-1" data-page="business">Dla firm</button>
-                    <button type="button" role="tab" id="page-tab-events" aria-selected="false"
-                      aria-controls="page-preview-content" tabindex="-1" data-page="events">Na wydarzenia</button>
-                  </div>
-                  <div class="pages-preview-content" id="page-preview-content" role="tabpanel"
-                    aria-labelledby="page-tab-about">
-                    <div class="pages-preview-copy"><small data-page-kicker>POZNAJ NASZĄ KUCHNIĘ</small>
-                      <h3 data-page-title>Dobry smak.<br />Dobrzy ludzie.</h3>
-                      <p data-page-description>Gotujemy sezonowo, lokalnie i z sercem. Tak, jak lubisz najbardziej.</p>
-                      <span class="pages-preview-cta" data-page-cta>Nasza historia ↗</span>
-                    </div>
-                    <div class="pages-illustration" aria-hidden="true">
-                      <svg viewBox="0 0 220 250" fill="none" stroke="currentColor" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="110" cy="125" r="85" fill="#cbd8af" stroke="none" />
-                        <g data-page-art="about">
-                          <path d="M79 89C58 85 60 56 81 56C87 32 122 32 129 56C154 49 169 79 147 90L143 110H82Z"
-                            fill="#fffdf7" />
-                          <path d="M88 111V134C88 162 132 162 132 134V111" fill="#edb78e" />
-                          <path d="M95 129H96M123 129H124M103 141Q110 147 117 141" />
-                          <path d="M60 205V187Q60 165 87 163L110 182L133 163Q160 165 160 187V205" fill="#fffdf7" />
-                          <path d="M92 168L87 205M128 168L133 205M101 191H119" />
-                          <path
-                            d="M52 116V143M44 116V131Q44 140 52 140Q60 140 60 131V116M52 143V171M175 116V171M175 116Q159 128 175 144" />
-                        </g>
-                        <g data-page-art="business" hidden>
-                          <path d="M54 199V65H147V199" fill="#fffdf7" />
-                          <path d="M147 105H173V199M42 199H183" />
-                          <path
-                            d="M72 85H85V98H72ZM112 85H125V98H112ZM72 118H85V131H72ZM112 118H125V131H112ZM89 199V165H113V199"
-                            fill="#aebe8a" />
-                          <rect x="117" y="145" width="76" height="48" rx="9" fill="#edb78e" />
-                          <path d="M139 145V137H171V145M117 161H193M149 161V169H161V161" />
-                        </g>
-                        <g data-page-art="events" hidden>
-                          <path d="M45 157H177L188 189H34ZM52 189V213M168 189V213" fill="#fffdf7" />
-                          <ellipse cx="110" cy="170" rx="27" ry="9" fill="#cbd8af" />
-                          <path
-                            d="M64 154V127M55 107H73L70 123Q64 132 58 123ZM157 154V127M148 107H166L163 123Q157 132 151 123Z"
-                            fill="#edb78e" />
-                          <path d="M103 151V121H117V151" fill="#edb78e" />
-                          <path d="M110 116Q98 106 110 95Q122 106 110 116Z" fill="#ed6847" stroke="none" />
-                          <path d="M48 52Q110 86 172 52M68 62L74 83L88 70M103 74L113 92L123 74M140 68L156 82L160 61" />
-                          <path d="M38 94L43 99M179 95L184 90M93 43V49" stroke="#ed6847" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="pages-preview-footer"><span data-page-footer>Sezonowe składniki. Własne przepisy. Nasz
-                      charakter.</span><span aria-hidden="true">✳︎</span></div>
+              <div class="zone-map" aria-label="Przykład trzech stref dostawy">
+                <div class="map-grid" aria-hidden="true"></div>
+                <div class="range-ring range-ring-far" aria-hidden="true"></div>
+                <div class="range-ring range-ring-mid" aria-hidden="true"></div>
+                <div
+                  class="range-ring range-ring-near"
+                  aria-hidden="true"
+                ></div>
+                <svg
+                  class="delivery-route"
+                  viewBox="0 0 560 560"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M280 280C318 251 337 204 375 196C420 186 438 236 462 217"
+                  />
+                </svg>
+                <div class="kitchen-pin">
+                  <span aria-hidden="true">⌂</span><b>Twoja kuchnia</b>
+                </div>
+                <div class="client-pin">
+                  <i aria-hidden="true"></i><b>Klient</b><span>8,4 km</span>
+                </div>
+                <div class="zone-price zone-price-near">
+                  <span>do 5 km</span><strong>0 zł</strong>
+                </div>
+                <div class="zone-price zone-price-mid">
+                  <span>5–12 km</span><strong>12 zł</strong>
+                </div>
+                <div class="zone-price zone-price-far">
+                  <span>12–20 km</span><strong>24 zł</strong>
+                </div>
+                <div class="price-result">
+                  <span>Koszt dostawy</span>
+                  <strong>12,00 zł</strong>
+                  <small>Strefa 2 · naliczono automatycznie</small>
                 </div>
               </div>
-              <p class="pages-demo-caption">Przykładowe podstrony · odkryj treść każdej zakładki</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="wrap">
-        <div class="section-title">
-          <h2>Codzienna obsługa zamówień</h2>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <h3>Menu na każdy dzień</h3>
-            <p>Publikuj inne dania na każdy dzień tygodnia.</p>
-            <div class="feature-preview-stage feature-preview-stage--menu">
-              <div class="feature-menu-scroll" tabindex="0" role="region" aria-label="Przykładowy tydzień menu. Przewijaj w poziomie.">
-                <ul class="feature-menu-days">
+          <div
+            class="feature-view custom-pages"
+            id="feature-view-pages"
+            role="tabpanel"
+            aria-labelledby="feature-tab-pages"
+            tabindex="0"
+            aria-hidden="true"
+            inert
+          >
+            <div class="wrap custom-pages-grid">
+              <div class="pages-copy">
+                <h2 id="custom-pages-title">Własne podstrony cateringu</h2>
+                <p>
+                  Twoja strona może pokazywać znacznie więcej niż menu. Twórz
+                  dodatkowe podstrony z własną treścią, opisz zakres swojej
+                  oferty i pokaż odwiedzającym, dlaczego warto wybrać właśnie
+                  Ciebie.
+                </p>
+                <ul class="pages-benefits">
+                  <li><span>01</span> Opowiedz o swojej kuchni i ludziach.</li>
                   <li>
-                    <span>Poniedziałek</span>
-                    <time datetime="2026-11-16">16 lis</time>
+                    <span>02</span> Wyeksponuj catering, ofertę dla firm lub
+                    wydarzenia.
                   </li>
                   <li>
-                    <span>Wtorek</span>
-                    <time datetime="2026-11-17">17 lis</time>
-                  </li>
-                  <li>
-                    <span>Środa</span>
-                    <time datetime="2026-11-18">18 lis</time>
-                  </li>
-                  <li>
-                    <span>Czwartek</span>
-                    <time datetime="2026-11-19">19 lis</time>
-                  </li>
-                  <li>
-                    <span>Piątek</span>
-                    <time datetime="2026-11-20">20 lis</time>
-                  </li>
-                  <li>
-                    <span>Sobota</span>
-                    <time datetime="2026-11-21">21 lis</time>
-                  </li>
-                  <li>
-                    <span>Niedziela</span>
-                    <time datetime="2026-11-22">22 lis</time>
+                    <span>03</span> Pokaż, co oferujesz i dla kogo gotujesz.
                   </li>
                 </ul>
+                <a class="button secondary" href="#demo">Wypróbuj demo</a>
               </div>
-            </div>
-          </article>
-          <article>
-            <h3>Godziny zamówień</h3>
-            <p>System automatycznie zamknie zamawianie o wybranej porze.</p>
-            <div class="feature-preview-stage" aria-hidden="true">
-              <div class="feature-preview">
-                <span class="feature-preview-clock"></span>
-                <span>Zamówienia do <strong class="feature-preview-accent">10:00</strong></span>
-              </div>
-            </div>
-          </article>
-          <article>
-            <h3>Wiele firm i dostaw</h3>
-            <p>Obsługuj wszystkich klientów z jednego panelu.</p>
-            <div class="feature-preview-stage" aria-hidden="true">
-              <div class="feature-preview">
-                <span>Biuro</span><span class="feature-preview-route"></span><span>Magazyn</span>
-              </div>
-            </div>
-          </article>
-          <article>
-            <h3>Zestawienia dla kuchni</h3>
-            <p>Gotowe ilości dań bez ręcznego przepisywania.</p>
-            <div class="feature-preview-stage feature-preview-stage--kitchen" aria-hidden="true">
-              <div class="feature-preview feature-preview--ticket">
-                <div class="feature-preview-row"><span>Schabowy</span><strong>× 28</strong></div>
-                <div class="feature-preview-row"><span>Kurczak teriyaki</span><strong>× 14</strong></div>
-              </div>
-            </div>
-          </article>
-          <article>
-            <h3>Płatności i rozliczenia</h3>
-            <p>Obsługuj płatności online i rozliczenia klientów.</p>
-            <div class="feature-preview-stage" aria-hidden="true">
-              <div class="feature-preview">
-                <strong class="feature-preview-price">32 zł</strong><span class="feature-preview-accent">Opłacone</span>
-              </div>
-            </div>
-          </article>
-          <article>
-            <h3>Powiadomienia</h3>
-            <p>Wykorzystaj powiadomienia e-mail lub integracje API.</p>
-            <div class="feature-preview-stage" aria-hidden="true">
-              <div class="feature-preview-notifications">
-                <div class="feature-preview">
-                  <span class="feature-preview-envelope"></span><span>Lista zamówień jest gotowa</span>
+              <div class="pages-showcase" data-pages-showcase>
+                <div class="pages-orbit" aria-hidden="true"></div>
+                <div class="pages-browser">
+                  <div class="pages-browser-bar">
+                    <span class="pages-dots" aria-hidden="true">● ● ●</span
+                    ><span>twoja-kuchnia.eatally.pl</span
+                    ><span aria-hidden="true">↗</span>
+                  </div>
+                  <div class="pages-preview">
+                    <div class="pages-preview-header">
+                      <strong
+                        >dobry stół<span>kuchnia z charakterem</span></strong
+                      ><span aria-hidden="true">EST. 2016</span>
+                    </div>
+                    <div
+                      class="pages-tabs"
+                      role="tablist"
+                      aria-label="Przykładowe podstrony"
+                    >
+                      <button
+                        type="button"
+                        role="tab"
+                        id="page-tab-about"
+                        aria-selected="true"
+                        aria-controls="page-preview-content"
+                        data-page="about"
+                      >
+                        O nas
+                      </button>
+                      <button
+                        type="button"
+                        role="tab"
+                        id="page-tab-business"
+                        aria-selected="false"
+                        aria-controls="page-preview-content"
+                        tabindex="-1"
+                        data-page="business"
+                      >
+                        Dla firm
+                      </button>
+                      <button
+                        type="button"
+                        role="tab"
+                        id="page-tab-events"
+                        aria-selected="false"
+                        aria-controls="page-preview-content"
+                        tabindex="-1"
+                        data-page="events"
+                      >
+                        Na wydarzenia
+                      </button>
+                    </div>
+                    <div
+                      class="pages-preview-content"
+                      id="page-preview-content"
+                      role="tabpanel"
+                      aria-labelledby="page-tab-about"
+                    >
+                      <div class="pages-preview-copy">
+                        <small data-page-kicker>POZNAJ NASZĄ KUCHNIĘ</small>
+                        <h3 data-page-title>Dobry smak.<br />Dobrzy ludzie.</h3>
+                        <p data-page-description>
+                          Gotujemy sezonowo, lokalnie i z sercem. Tak, jak
+                          lubisz najbardziej.
+                        </p>
+                        <span class="pages-preview-cta" data-page-cta
+                          >Nasza historia ↗</span
+                        >
+                      </div>
+                      <div class="pages-illustration" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 220 250"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle
+                            cx="110"
+                            cy="125"
+                            r="85"
+                            fill="#cbd8af"
+                            stroke="none"
+                          />
+                          <g data-page-art="about">
+                            <path
+                              d="M79 89C58 85 60 56 81 56C87 32 122 32 129 56C154 49 169 79 147 90L143 110H82Z"
+                              fill="#fffdf7"
+                            />
+                            <path
+                              d="M88 111V134C88 162 132 162 132 134V111"
+                              fill="#edb78e"
+                            />
+                            <path
+                              d="M95 129H96M123 129H124M103 141Q110 147 117 141"
+                            />
+                            <path
+                              d="M60 205V187Q60 165 87 163L110 182L133 163Q160 165 160 187V205"
+                              fill="#fffdf7"
+                            />
+                            <path
+                              d="M92 168L87 205M128 168L133 205M101 191H119"
+                            />
+                            <path
+                              d="M52 116V143M44 116V131Q44 140 52 140Q60 140 60 131V116M52 143V171M175 116V171M175 116Q159 128 175 144"
+                            />
+                          </g>
+                          <g data-page-art="business" hidden>
+                            <path d="M54 199V65H147V199" fill="#fffdf7" />
+                            <path d="M147 105H173V199M42 199H183" />
+                            <path
+                              d="M72 85H85V98H72ZM112 85H125V98H112ZM72 118H85V131H72ZM112 118H125V131H112ZM89 199V165H113V199"
+                              fill="#aebe8a"
+                            />
+                            <rect
+                              x="117"
+                              y="145"
+                              width="76"
+                              height="48"
+                              rx="9"
+                              fill="#edb78e"
+                            />
+                            <path
+                              d="M139 145V137H171V145M117 161H193M149 161V169H161V161"
+                            />
+                          </g>
+                          <g data-page-art="events" hidden>
+                            <path
+                              d="M45 157H177L188 189H34ZM52 189V213M168 189V213"
+                              fill="#fffdf7"
+                            />
+                            <ellipse
+                              cx="110"
+                              cy="170"
+                              rx="27"
+                              ry="9"
+                              fill="#cbd8af"
+                            />
+                            <path
+                              d="M64 154V127M55 107H73L70 123Q64 132 58 123ZM157 154V127M148 107H166L163 123Q157 132 151 123Z"
+                              fill="#edb78e"
+                            />
+                            <path d="M103 151V121H117V151" fill="#edb78e" />
+                            <path
+                              d="M110 116Q98 106 110 95Q122 106 110 116Z"
+                              fill="#ed6847"
+                              stroke="none"
+                            />
+                            <path
+                              d="M48 52Q110 86 172 52M68 62L74 83L88 70M103 74L113 92L123 74M140 68L156 82L160 61"
+                            />
+                            <path
+                              d="M38 94L43 99M179 95L184 90M93 43V49"
+                              stroke="#ed6847"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="pages-preview-footer">
+                      <span data-page-footer
+                        >Sezonowe składniki. Własne przepisy. Nasz
+                        charakter.</span
+                      ><span aria-hidden="true">✳︎</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="feature-preview">
-                  <span class="feature-preview-clock"></span>
-                  <span><strong>Push</strong><br />Zamówienia do 10:00</span>
-                </div>
+                <p class="pages-demo-caption">
+                  Przykładowe podstrony · odkryj treść każdej zakładki
+                </p>
               </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="product-demo" id="demo" aria-labelledby="product-demo-title">
-      <div class="wrap">
-        <h2 id="product-demo-title">Wypróbuj Eatally w dwóch rolach</h2>
-        <div class="product-demo-grid">
-          <article class="product-demo-card">
-            <p class="eyebrow">Dla zamawiających</p>
-            <h3>Strona cateringu</h3>
-            <p>Przejrzyj przykładowe menu, wybierz posiłki i zobacz, jak wygląda składanie zamówienia.</p>
-            <a class="button secondary" href="https://demo.eatally.pl/" target="_blank" rel="noopener">Otwórz catering
-              demo <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="product-demo-card">
-            <p class="eyebrow">Dla restauracji</p>
-            <h3>Panel zarządzania</h3>
-            <p>Sprawdź, jak restauracja demo zarządza menu i obsługuje zamówienia. Na ekranie logowania wybierz „Zobacz
-              konto demonstracyjne”.</p>
-            <a class="button secondary" href="https://panel.eatally.pl/login" target="_blank" rel="noopener">Otwórz
-              panel demo <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="proof" id="o-nas">
-      <div class="wrap proof-grid">
-        <p class="eyebrow light">Sprawdzone w codziennej pracy</p>
-        <div class="proof-story">
-          <h2><strong>10+</strong> lat obsługi zamówień.</h2>
-          <p>
-            System powstał z prawdziwej potrzeby obsługi codziennych zamówień
-            i od lat działa produkcyjnie u klientów.
-          </p>
-        </div>
-        <figure class="proof-quote">
-          <blockquote>
-            „Eatally uporządkowało nam codzienne zamówienia. Klienci od razu
-            widzą aktualne menu, a my mamy wszystko w jednym miejscu i możemy
-            skupić się na gotowaniu.”
-          </blockquote>
-          <figcaption>
-            <span>MP</span>
-            <div><b>Marchewkowe Pole</b><small>Catering</small></div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="start" class="instant-launch" aria-labelledby="instant-launch-title">
-      <div class="wrap instant-launch-grid">
-        <div class="instant-launch-copy">
-          <p class="eyebrow">Od pomysłu do strony w kilka sekund</p>
-          <h2 id="instant-launch-title">
-            Utwórz stronę cateringu
-          </h2>
-          <p class="instant-launch-lead">
-            Podaj nazwę, wybierz adres i zacznij korzystać. Bez czekania na
-            wdrożenie, bez uzupełniania menu na start.
-          </p>
-        </div>
-        <div class="launch-result">
-          <div class="launch-window">
-            <div class="launch-window-body">
-              <span class="launch-label">Przykładowy adres</span>
-              <strong>twoj-catering<small>.eatally.pl</small></strong>
             </div>
           </div>
-          <a class="button launch-button" href="https://panel.eatally.pl/rejestracja" data-analytics="open_register">
-            Utwórz swoją stronę
-          </a>
-          <p class="contact-consent">
-            Zakładając stronę, prosisz nas również o kontakt. Bezpłatnie
-            pomożemy Ci zacząć albo odpowiemy na dodatkowe pytania.
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="wrap">
+          <div class="section-title">
+            <h2>Codzienna obsługa zamówień</h2>
+          </div>
+          <div class="feature-grid">
+            <article>
+              <h3>Menu na każdy dzień</h3>
+              <p>Publikuj inne dania na każdy dzień tygodnia.</p>
+              <div class="feature-preview-stage feature-preview-stage--menu">
+                <div
+                  class="feature-menu-scroll"
+                  tabindex="0"
+                  role="region"
+                  aria-label="Przykładowy tydzień menu. Przewijaj w poziomie."
+                >
+                  <ul class="feature-menu-days">
+                    <li>
+                      <span>Poniedziałek</span>
+                      <time datetime="2026-11-16">16 lis</time>
+                    </li>
+                    <li>
+                      <span>Wtorek</span>
+                      <time datetime="2026-11-17">17 lis</time>
+                    </li>
+                    <li>
+                      <span>Środa</span>
+                      <time datetime="2026-11-18">18 lis</time>
+                    </li>
+                    <li>
+                      <span>Czwartek</span>
+                      <time datetime="2026-11-19">19 lis</time>
+                    </li>
+                    <li>
+                      <span>Piątek</span>
+                      <time datetime="2026-11-20">20 lis</time>
+                    </li>
+                    <li>
+                      <span>Sobota</span>
+                      <time datetime="2026-11-21">21 lis</time>
+                    </li>
+                    <li>
+                      <span>Niedziela</span>
+                      <time datetime="2026-11-22">22 lis</time>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h3>Godziny zamówień</h3>
+              <p>System automatycznie zamknie zamawianie o wybranej porze.</p>
+              <div class="feature-preview-stage" aria-hidden="true">
+                <div class="feature-preview">
+                  <span class="feature-preview-clock"></span>
+                  <span
+                    >Zamówienia do
+                    <strong class="feature-preview-accent">10:00</strong></span
+                  >
+                </div>
+              </div>
+            </article>
+            <article>
+              <h3>Wiele firm i dostaw</h3>
+              <p>Obsługuj wszystkich klientów z jednego panelu.</p>
+              <div class="feature-preview-stage" aria-hidden="true">
+                <div class="feature-preview">
+                  <span>Biuro</span><span class="feature-preview-route"></span
+                  ><span>Magazyn</span>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h3>Zestawienia dla kuchni</h3>
+              <p>Gotowe ilości dań bez ręcznego przepisywania.</p>
+              <div
+                class="feature-preview-stage feature-preview-stage--kitchen"
+                aria-hidden="true"
+              >
+                <div class="feature-preview feature-preview--ticket">
+                  <div class="feature-preview-row">
+                    <span>Schabowy</span><strong>× 28</strong>
+                  </div>
+                  <div class="feature-preview-row">
+                    <span>Kurczak teriyaki</span><strong>× 14</strong>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h3>Płatności i rozliczenia</h3>
+              <p>Obsługuj płatności online i rozliczenia klientów.</p>
+              <div class="feature-preview-stage" aria-hidden="true">
+                <div class="feature-preview">
+                  <strong class="feature-preview-price">32 zł</strong
+                  ><span class="feature-preview-accent">Opłacone</span>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h3>Powiadomienia</h3>
+              <p>Wykorzystaj powiadomienia e-mail lub integracje API.</p>
+              <div class="feature-preview-stage" aria-hidden="true">
+                <div class="feature-preview-notifications">
+                  <div class="feature-preview">
+                    <span class="feature-preview-envelope"></span
+                    ><span>Lista zamówień jest gotowa</span>
+                  </div>
+                  <div class="feature-preview">
+                    <span class="feature-preview-clock"></span>
+                    <span><strong>Push</strong><br />Zamówienia do 10:00</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="product-demo"
+        id="demo"
+        aria-labelledby="product-demo-title"
+      >
+        <div class="wrap">
+          <h2 id="product-demo-title">Wypróbuj Eatally w dwóch rolach</h2>
+          <div class="product-demo-grid">
+            <article class="product-demo-card">
+              <p class="eyebrow">Dla zamawiających</p>
+              <h3>Strona cateringu</h3>
+              <p>
+                Przejrzyj przykładowe menu, wybierz posiłki i zobacz, jak
+                wygląda składanie zamówienia.
+              </p>
+              <a
+                class="button secondary"
+                href="https://demo.eatally.pl/"
+                target="_blank"
+                rel="noopener"
+                >Otwórz catering demo <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="product-demo-card">
+              <p class="eyebrow">Dla restauracji</p>
+              <h3>Panel zarządzania</h3>
+              <p>
+                Sprawdź, jak restauracja demo zarządza menu i obsługuje
+                zamówienia. Na ekranie logowania wybierz „Zobacz konto
+                demonstracyjne”.
+              </p>
+              <a
+                class="button secondary"
+                href="https://panel.eatally.pl/login"
+                target="_blank"
+                rel="noopener"
+                >Otwórz panel demo <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof" id="o-nas">
+        <div class="wrap proof-grid">
+          <p class="eyebrow light">Sprawdzone w codziennej pracy</p>
+          <div class="proof-story">
+            <h2><strong>10+</strong> lat obsługi zamówień.</h2>
+            <p>
+              System powstał z prawdziwej potrzeby obsługi codziennych zamówień
+              i od lat działa produkcyjnie u klientów.
+            </p>
+          </div>
+          <figure class="proof-quote">
+            <blockquote>
+              „Eatally uporządkowało nam codzienne zamówienia. Klienci od razu
+              widzą aktualne menu, a my mamy wszystko w jednym miejscu i możemy
+              skupić się na gotowaniu.”
+            </blockquote>
+            <figcaption>
+              <span>MP</span>
+              <div><b>Marchewkowe Pole</b><small>Catering</small></div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section
+        id="start"
+        class="instant-launch"
+        aria-labelledby="instant-launch-title"
+      >
+        <div class="wrap instant-launch-grid">
+          <div class="instant-launch-copy">
+            <p class="eyebrow">Od pomysłu do strony w kilka sekund</p>
+            <h2 id="instant-launch-title">Utwórz stronę cateringu</h2>
+            <p class="instant-launch-lead">
+              Podaj nazwę, wybierz adres i zacznij korzystać. Bez czekania na
+              wdrożenie, bez uzupełniania menu na start.
+            </p>
+          </div>
+          <div class="launch-result">
+            <form
+              class="launch-form"
+              action="https://panel.eatally.pl/rejestracja"
+              method="get"
+            >
+              <label for="launch-name">Wpisz nazwę cateringu</label>
+              <input
+                id="launch-name"
+                name="name"
+                type="text"
+                autocomplete="organization"
+                placeholder="np. Domowe obiady u Ani"
+                required
+                pattern=".*\S.*"
+              />
+              <div class="launch-window">
+                <div class="launch-window-body">
+                  <span class="launch-label">Przykładowy adres</span>
+                  <strong
+                    ><span id="launch-subdomain">twoj-catering</span
+                    ><small>.eatally.pl</small></strong
+                  >
+                </div>
+              </div>
+              <button
+                class="button launch-button"
+                type="submit"
+                data-analytics="open_register"
+              >
+                Utwórz swoją stronę
+              </button>
+            </form>
+            <p class="contact-consent">
+              Zakładając stronę, prosisz nas również o kontakt. Bezpłatnie
+              pomożemy Ci zacząć albo odpowiemy na dodatkowe pytania.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <a class="logo" href="/" data-scroll-top>eatally</a>
+        <span>System zamówień dla cateringów obsługujących firmy.</span>
+        <a href="mailto:eatally@ambrozkiewicz.com">eatally@ambrozkiewicz.com</a
+        ><span>© 2026</span>
+      </div>
+    </footer>
+
+    <dialog class="contact-dialog" id="kontakt" aria-labelledby="contact-title">
+      <div class="dialog-layout">
+        <button class="dialog-close" type="button" aria-label="Zamknij">
+          ×
+        </button>
+        <div class="dialog-copy">
+          <h2 id="contact-title" tabindex="-1">Umów demo</h2>
+          <p>
+            Odezwiemy się w ciągu jednego dnia roboczego i pokażemy Eatally na
+            przykładzie Twojego cateringu.
           </p>
         </div>
+        <form
+          class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="a2a3d410-fde3-415e-b42c-b34c2f70ab68"
+          /><input
+            type="hidden"
+            name="subject"
+            value="Nowe demo Eatally"
+          /><label>Imię<input name="name" required autocomplete="name" /></label
+          ><label
+            >Nazwa cateringu<input
+              name="restaurant"
+              required
+              autocomplete="organization" /></label
+          ><label
+            >E-mail<input
+              name="email"
+              type="email"
+              required
+              autocomplete="email" /></label
+          ><label
+            ><span>Telefon <small>opcjonalnie</small></span
+            ><input name="phone" type="tel" autocomplete="tel" /></label
+          ><button class="button primary" type="submit">Umów demo</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
-    </section>
-  </main>
+    </dialog>
 
-  <footer>
-    <div class="wrap">
-      <a class="logo" href="/" data-scroll-top>eatally</a>
-      <span>System zamówień dla cateringów obsługujących firmy.</span>
-      <a href="mailto:eatally@ambrozkiewicz.com">eatally@ambrozkiewicz.com</a><span>© 2026</span>
-    </div>
-  </footer>
+    <script type="module" src="/src/hero-orders.js"></script>
+    <script type="module" src="/src/custom-pages.js"></script>
+    <script type="module" src="/src/feature-explorer.js"></script>
+    <script>
+      const launchName = document.querySelector("#launch-name");
+      const launchSubdomain = document.querySelector("#launch-subdomain");
+      const exampleSubdomain = launchSubdomain.textContent;
 
-  <dialog class="contact-dialog" id="kontakt" aria-labelledby="contact-title">
-    <div class="dialog-layout">
-      <button class="dialog-close" type="button" aria-label="Zamknij">
-        ×
-      </button>
-      <div class="dialog-copy">
-        <h2 id="contact-title" tabindex="-1">Umów demo</h2>
-        <p>
-          Odezwiemy się w ciągu jednego dnia roboczego i pokażemy Eatally na
-          przykładzie Twojego cateringu.
-        </p>
-      </div>
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="a2a3d410-fde3-415e-b42c-b34c2f70ab68" /><input type="hidden"
-          name="subject" value="Nowe demo Eatally" /><label>Imię<input name="name" required
-            autocomplete="name" /></label><label>Nazwa cateringu<input name="restaurant" required
-            autocomplete="organization" /></label><label>E-mail<input name="email" type="email" required
-            autocomplete="email" /></label><label><span>Telefon <small>opcjonalnie</small></span><input name="phone"
-            type="tel" autocomplete="tel" /></label><button class="button primary" type="submit">Umów demo</button>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </dialog>
+      function updateLaunchAddress() {
+        const subdomain = launchName.value
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/\p{M}/gu, "")
+          .replace(/ł/g, "l")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-/, "")
+          .slice(0, 63)
+          .replace(/-$/, "");
 
-  <script type="module" src="/src/hero-orders.js"></script>
-  <script type="module" src="/src/custom-pages.js"></script>
-  <script type="module" src="/src/feature-explorer.js"></script>
-  <script>
-    const header = document.querySelector(".header");
-    addEventListener(
-      "scroll",
-      () => header.classList.toggle("scrolled", scrollY > 16),
-      { passive: true },
-    );
-    document.querySelectorAll("[data-scroll-top]").forEach((link) =>
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        history.replaceState(null, "", location.pathname + location.search);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }),
-    );
-    const dialog = document.querySelector("#kontakt");
-    document.querySelectorAll("[data-contact-modal]").forEach((el) =>
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        dialog.showModal();
-        window.analytics?.track("open_contact", { form: "contact" });
-        requestAnimationFrame(() =>
-          dialog
-            .querySelector("#contact-title")
-            .focus({ preventScroll: true }),
-        );
-      }),
-    );
-    dialog
-      .querySelector(".dialog-close")
-      .addEventListener("click", () => dialog.close());
-    dialog.addEventListener("click", (e) => {
-      if (e.target === dialog) dialog.close();
-    });
-    const form = dialog.querySelector("form");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const button = form.querySelector("button");
-      const status = form.querySelector(".form-status");
-      button.disabled = true;
-      button.textContent = "Wysyłanie…";
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
-        if (!response.ok) throw new Error();
-        form.reset();
-        status.classList.remove("is-error");
-        status.classList.add("is-success");
-        status.textContent = "Dziękujemy. Odezwiemy się wkrótce.";
-        button.textContent = "Wysłano ✓";
-        window.analytics?.track("send_contact", { form: "contact" });
-      } catch {
-        status.classList.remove("is-success");
-        status.classList.add("is-error");
-        status.textContent =
-          "Nie udało się wysłać. Napisz: eatally@ambrozkiewicz.com";
-        button.disabled = false;
-        button.textContent = "Spróbuj ponownie";
+        launchSubdomain.textContent = subdomain || exampleSubdomain;
       }
-    });
-  </script>
-</body>
 
+      launchName.addEventListener("input", updateLaunchAddress);
+      addEventListener("pageshow", updateLaunchAddress);
+
+      const header = document.querySelector(".header");
+      addEventListener(
+        "scroll",
+        () => header.classList.toggle("scrolled", scrollY > 16),
+        { passive: true },
+      );
+      document.querySelectorAll("[data-scroll-top]").forEach((link) =>
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          history.replaceState(null, "", location.pathname + location.search);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }),
+      );
+      const dialog = document.querySelector("#kontakt");
+      document.querySelectorAll("[data-contact-modal]").forEach((el) =>
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          dialog.showModal();
+          window.analytics?.track("open_contact", { form: "contact" });
+          requestAnimationFrame(() =>
+            dialog
+              .querySelector("#contact-title")
+              .focus({ preventScroll: true }),
+          );
+        }),
+      );
+      dialog
+        .querySelector(".dialog-close")
+        .addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (e) => {
+        if (e.target === dialog) dialog.close();
+      });
+      const form = dialog.querySelector("form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const button = form.querySelector("button");
+        const status = form.querySelector(".form-status");
+        button.disabled = true;
+        button.textContent = "Wysyłanie…";
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+          if (!response.ok) throw new Error();
+          form.reset();
+          status.classList.remove("is-error");
+          status.classList.add("is-success");
+          status.textContent = "Dziękujemy. Odezwiemy się wkrótce.";
+          button.textContent = "Wysłano ✓";
+          window.analytics?.track("send_contact", { form: "contact" });
+        } catch {
+          status.classList.remove("is-success");
+          status.classList.add("is-error");
+          status.textContent =
+            "Nie udało się wysłać. Napisz: eatally@ambrozkiewicz.com";
+          button.disabled = false;
+          button.textContent = "Spróbuj ponownie";
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -1163,23 +1163,6 @@ h3 {
   font-size: 17px;
   line-height: 1.65;
 }
-.launch-result {
-  position: relative;
-}
-.launch-result::before {
-  content: "GOTOWE";
-  position: absolute;
-  top: -41px;
-  right: -20px;
-  z-index: 2;
-  padding: 10px 14px;
-  background: $orange;
-  color: $white;
-  font: 600 9px var(--ea-font-data);
-  letter-spacing: 1px;
-  transform: rotate(4deg);
-  box-shadow: none;
-}
 .launch-window {
   overflow: hidden;
   border: 2px solid $ink;
@@ -1218,11 +1201,34 @@ h3 {
   color: $muted;
   font-size: 13px;
 }
+.launch-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+.launch-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.launch-form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: 12px 16px;
+  border: 1px solid var(--ea-control-border);
+  border-radius: var(--ea-radius-field);
+  background: $white;
+  color: $ink;
+  font: inherit;
+}
+.launch-form input:focus-visible {
+  outline: 2px solid $ink;
+  outline-offset: 2px;
+}
 .launch-button {
   @include interface.primary;
   width: 100%;
   min-height: 60px;
-  margin-top: 34px;
   border-width: 2px;
   border-color: $ink;
   font-size: 15px;
@@ -1614,9 +1620,6 @@ footer a:not(.logo) {
   }
   .instant-launch-lead {
     font-size: 15px;
-  }
-  .launch-result::before {
-    right: 2px;
   }
   .launch-window {
     box-shadow: none;
