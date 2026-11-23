@@ -1132,7 +1132,7 @@ h3 {
   position: relative;
   overflow: hidden;
   min-height: 100dvh;
-  padding: 120px 0;
+  padding-block: clamp(48px, 9dvh, 96px);
   display: flex;
   align-items: center;
   color: $ink;
@@ -1172,8 +1172,8 @@ h3 {
 }
 
 .launch-window-body {
-  min-height: 285px;
-  padding: clamp(32px, 5vw, 52px);
+  min-height: 200px;
+  padding: clamp(24px, 4vw, 44px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1412,7 +1412,7 @@ footer a:not(.logo) {
   }
   .instant-launch-grid {
     grid-template-columns: 1fr;
-    gap: 75px;
+    gap: 36px;
   }
   .instant-launch-copy {
     max-width: 680px;
@@ -1609,7 +1609,8 @@ footer a:not(.logo) {
     font-size: 38px;
   }
   .instant-launch {
-    padding-block: 88px;
+    min-height: auto;
+    padding-block: 56px;
   }
   .instant-launch::before {
     mask-image: linear-gradient(#000, transparent 85%);
@@ -1625,8 +1626,8 @@ footer a:not(.logo) {
     box-shadow: none;
   }
   .launch-window-body {
-    min-height: 225px;
-    padding: 30px 22px;
+    min-height: 140px;
+    padding: 24px 22px;
   }
   .launch-window-body strong {
     font-size: clamp(20px, 7vw, 30px);
